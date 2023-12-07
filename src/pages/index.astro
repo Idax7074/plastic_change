@@ -1,4 +1,38 @@
 ---
-
+import MainLayout from "../layout/MainLayout.astro"
+import Text from "../components/Text.astro"
+import Formular from "../components/Formular.astro"
+import Button from "../components/Button.astro"
 ---
 
+<MainLayout title="Plastic change">
+	<section>
+		<Text/>
+		<h2>Vi vil have din hjælp, men du behøver ikke at gøre noget fysisk arbejde </h2>
+		<Formular/>
+	</section>
+
+	<section>
+		<h2>#SingleUseSucks</h2>
+		<p>
+			Plastik er et fantastisk materiale, der gør livet lettere for os alle samme - Men det skal bruges rigtigt. 
+			Plastik og især engangsplastik har vidtrækkende konsekvenser for klima, klodens ressourcer, biodiversitet, livet i havet og forurening samt menneskers sundhed.
+			Derfor er det vigtigt, at vi skrider ind nu og lukker for plastikhanen, inden det er for sent.
+		</p>
+		<Button variant="primary">Læs mere her</Button>
+		<img src="" alt="Genbrugs cirkel">
+	</section>
+
+	<section>
+		<h2>Hvad er løsningen</h2>
+		<p>
+			I en verden hvor vi udleder 8 mio. tons affald i verdenshavene er det vigtigt at vi begynder at tænke over, hvordan vi bruger og ikke mindst genbruger vores plastik. <br>
+			Men skal vi genbruge eller genanvende? hvad er bedst for miljøet? og hvad er nemmest for os? <br>
+			Vi skal sammen komme væk fra “brug-og-smid-væk-kulturen” da dette ikke bidrager til at genbruge, men derimod genanvende, og netop det at genanvende er en meget længere process der kun bidrager til mere CO2 udledning. <br>
+			Så hvad er den bedste løsning?
+		</p>
+		<Button variant="primary">Læs mere her</Button>
+		<img src="" alt="Tegning af en pige der er forvirret">
+	</section>
+
+</MainLayout>
