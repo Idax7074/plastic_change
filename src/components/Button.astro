@@ -1,0 +1,88 @@
+---
+const {variant, size, link} = Astro.props
+---
+
+<button class={variant}> <a class={size} href={link}><slot/></a> </button>
+
+
+
+<style>
+    button {
+        display: flex;
+        width: auto;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: var(--radius-pill);
+        border: none;
+        outline: none;
+    }
+
+    button:hover {
+        display: flex;
+        width: auto;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: var(--radius-pill);
+        border: none;
+        outline: none;
+    }
+
+    button a {
+        font-family: "Campton";
+        font-size: var(--Label-large);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        text-decoration: none;
+    }
+
+    .primary {
+        color: var(--color-button-text);
+        background: var(--color-button-background);
+        border: 2px solid var(--color-button-stroke);
+        padding: var(--spacing-vertical-button-lg) var(--spacing-horizontal-button-sm);
+    }
+
+    .primary a{
+        color: var(--color-button-text);
+    }
+
+    .primary:hover {
+        color: var(--color-button-text-hover);
+        background: var(--color-button-background-hover);
+        border: 2px solid var(--color-button-stroke);
+        padding: var(--spacing-vertical-button-lg) var(--spacing-horizontal-button-sm);
+    }
+
+    .primary:hover a{
+        color: var(--color-button-text-hover);
+    }
+
+    .secondary {
+        color: var(--color-button-text);
+        background: var(--color-button-background);
+        border: 2px solid var(--color-button-stroke);
+        padding: var(--spacing-vertical-button-lg) var(--spacing-horizontal-button-lg);
+    }
+
+    .secondary:hover {
+        color: var(--color-button-text-hover);
+        background: var(--color-button-background-hover);
+        border: 2px solid var(--color-button-stroke);
+        padding: var(--spacing-vertical-button-lg) var(--spacing-horizontal-button-lg);
+    }
+
+    .small {
+        font-size: var(--Label-small);
+    }
+
+    .medium {
+        font-size: var(--Label-medium);
+    }
+
+    .large {
+        font-size: var(--Label-large);
+    }
+    
+</style>

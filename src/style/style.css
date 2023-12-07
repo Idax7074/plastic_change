@@ -11,9 +11,11 @@
   --color-text-display: #ffffff;
   --color-text-h2: #1c1e23;
   --color-text-h3: #ff1054;
+  --color-text-h3-secondary: #ffffff;
   --color-text-h4: #1c1e23;
   --color-text-body: #1c1e23;
   --color-text-nav: #70727e;
+  --color-text-nav-hover: #1C1E23;
   --color-text-footer: #70727e;
 
   /*Knap farver*/
@@ -67,16 +69,17 @@
   --radius-pill: 99999rem;
 
   /*Gap*/
-  --spacing-gap-hero: 4.0625rem;
-  --spacing-gap-section: 1.875rem;
-  --spacing-gap-card-text: 1.875rem;
-  --spacing-gap-instagram: 2.5rem;
+  --spacing-12: 6.25rem:
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+main {
+  background-color: var(--color-background-primary);
 }
 
 img,

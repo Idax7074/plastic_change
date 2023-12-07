@@ -6,24 +6,30 @@ import Button from "../components/Button.astro"
 ---
 
 <MainLayout title="Plastic-change">
-	<section class="hero">
+	<section class="herosection">
 		<Text/>
 		<h2>Vi vil have din hjælp, men du behøver ikke at gøre noget fysisk arbejde </h2>
 		<Formular/>
 	</section>
 
-	<section class="sus">
+	<section class="section1">
+		<article class="sus">
+		<div class="text">
 		<h2>#SingleUseSucks</h2>
 		<p>
 			Plastik er et fantastisk materiale, der gør livet lettere for os alle samme - Men det skal bruges rigtigt. 
 			Plastik og især engangsplastik har vidtrækkende konsekvenser for klima, klodens ressourcer, biodiversitet, livet i havet og forurening samt menneskers sundhed.
 			Derfor er det vigtigt, at vi skrider ind nu og lukker for plastikhanen, inden det er for sent.
 		</p>
-		<Button variant="primary">Læs mere her</Button>
+		<Button variant="primary" link="/sus">Læs mere her</Button>
+		</div>
 		<img src="/img/genbrugscirkel.svg" alt="Genbrugs cirkel">
+		</article>
 	</section>
 
-	<section class="løsning">
+	<section class="section2">
+		<article class="løsning">
+		<div class="text">
 		<h2>Hvad er løsningen</h2>
 		<p>
 			I en verden hvor vi udleder 8 mio. tons affald i verdenshavene er det vigtigt at vi begynder at tænke over, hvordan vi bruger og ikke mindst genbruger vores plastik. <br>
@@ -32,7 +38,65 @@ import Button from "../components/Button.astro"
 			Så hvad er den bedste løsning?
 		</p>
 		<Button variant="primary">Læs mere her</Button>
+		</div>
 		<img src="/img/taanker.svg" alt="Tegning af en pige der er forvirret">
+		</article>
 	</section>
-
 </MainLayout>
+
+<style>
+	.herosection {
+		height: 52.625rem;
+		background: var(--color-background-hero);
+	}
+
+	.herosection h2 {
+		color: var(--color-text-h3-secondary);
+		width: 30.9375rem;
+		height: 3.3125rem;
+	}
+
+	.sus {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 94.5rem;
+		justify-content: center;
+		align-items: center;
+		gap: 19.1875rem;
+
+		margin-inline: auto;
+		max-width: 1400px;
+	}
+
+	.løsning {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: center;
+		align-items: center;
+		gap: 15.0625rem;
+
+		margin-inline: auto;
+		max-width: 1400px;
+	}
+
+	.løsning img {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.section2 {
+		background-color: var(--color-background-section);
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2.5rem;
+	}
+
+    section {
+		padding-top: 6.25rem;
+        padding-bottom: 6.25rem;
+	}
+</style>

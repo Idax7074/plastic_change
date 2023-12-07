@@ -9,6 +9,8 @@ import Button from "../components/Button.astro"
 </section>
 
 <section>
+    <article class="what">
+        <div class="text">
     <h2>Hvad er Single Use?</h2>
     <p>
         Vi har sagt det før og vi siger det igen: plastik er et fantastisk materiale, der har en masse fordele, og gør livet lettere for os alle sammen. <br>
@@ -17,16 +19,19 @@ import Button from "../components/Button.astro"
         Det har ført til, at vi indenfor de næste 20 år forventes den globale plastikproduktion fordobles, og i samme periode forventes plastikforureningen at firedobles. 
         Plastik og især engangsplastik er grunden til at vi ser plastikforurening og mikroplastik i alle verdens afkroge, i maver på uskyldige dyr og nu senest ophober den sig flere og flere steder i menneskekroppen.
     </p>
+    </div>
     <img src="" alt="Affaldsbunke">
+    </article>
 </section>
 
-<section>
+<section class="infografik">
     <h2>Hvad bliver plastik brugt til?</h2>
     <img src="img/diagram.svg" alt="Infografik om hvad plastikken går til">
 </section>
 
-<section>
-    <article>
+<section class="section2">
+    <div class="underemner">
+    <article class="text">
         <h2>Men hvad kan vi egentlig gøre?</h2>
         <h3> 
             “Faktisk er det meget begrænset, hvad den almindelige borger kan gøre for at bremse de største kilder til mikroplastikspild og forurening”
@@ -37,7 +42,7 @@ import Button from "../components/Button.astro"
         <Button variant="primary">Læs mere her</Button>
     </article>
 
-    <article>
+    <article class="text">
         <h2>Konsekvenser</h2>
         <h3> 
             “Én ting er plastikforurening. Noget andet er de mange kemikalier, som plastikken er tilsat. Det er især dem, vi skal være bekymrede for.”
@@ -47,5 +52,60 @@ import Button from "../components/Button.astro"
         </p>
         <Button variant="primary">Læs mere her</Button>
     </article>
+    </div>
 </section>
 </MainLayout>
+
+<style>
+
+.what {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 94.5rem;
+		justify-content: center;
+		align-items: center;
+		gap: 19.1875rem;
+
+		margin-inline: auto;
+		max-width: 1400px;
+	}
+
+    .text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2.5rem;
+	}
+
+    .infografik {
+        width: 94.5rem;
+        margin-inline: auto;
+		max-width: 1400px;
+    }
+
+    .infografik img {
+        width: 81.9375rem;
+        height: 38.99231rem;
+    }
+
+    .underemner{
+        display: grid;
+		grid-template-columns: 1fr 1fr;
+        width: 94.4375rem;
+        justify-content: center;
+        align-items: center;
+        gap: 9.75rem;
+
+        margin-inline: auto;
+		max-width: 1400px;
+    }
+
+    .section2 {
+		background-color: var(--color-background-section);
+	}
+
+    section {
+		padding-top: 6.25rem;
+        padding-bottom: 6.25rem;
+	}
+</style>

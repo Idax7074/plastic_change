@@ -1,0 +1,332 @@
+---
+import Button from "../components/Button.astro"
+---
+
+<header class="banner">
+  <div class="logo">
+    <a href="/">Plastic change</a>
+  </div>
+  <nav class="menu">
+    <button class="toggle-btn" aria-label="Burgermenu">
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+      <span class="bar3"></span>
+    </button>
+    <ul>
+      <li>
+        <a href="/sus">#SingleUseSucks</a>
+        <ul id="submenu">
+          <li><a href="/konsekvenser">Konsekvenserne af forbruget</a></li>
+          <li><a href="/genbrug">Genbrug over genanvendelse</a></li>
+        </ul>
+      </li>
+      <li><a href="/om">Hvad vi vil</a></li>
+    </ul>
+  </nav>
+  <ul class="knapper">
+    <Button variant="primary" size="large" link="#">Støt her</Button>
+  <li><i class="fas fa-shopping-basket"></i></li>
+</ul>
+<ul class="lilleknap">
+    <Button variant="primary" size="small" link="#">Støt her</Button>
+</ul>
+</header>
+
+<script src="../script/burger.js"></script>
+
+<style>
+  header {
+    width: 100%;
+    background: var(--color-background-nav);
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img {
+    width: 25%;
+    height: auto;
+  }
+
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .shop {
+    display: flex;
+    align-items: center;
+  }
+
+  .shop li {
+    padding-inline: 20px;
+    list-style: none;
+  }
+
+  .logo a {
+    background: var(--color-icon-background-hover);
+    color: var(--color-icon-text-hover);
+
+    display: block;
+    width:175px;
+    padding: 20px;
+    text-decoration: none;
+    font-family: "NotoSans", sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+  }
+
+  .knapper {
+    display:block;
+    width: 200px;
+  }
+
+  ul {
+        list-style: none;
+    }
+
+    .lilleknap {
+        display:none
+    }
+
+  @media (min-width: 1025px) {
+
+    #submenu {
+      left: 10px;
+      opacity: 0;
+      position: absolute;
+      top: 45px;
+      visibility: hidden;
+      z-index: 1;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    li:hover ul#submenu {
+      opacity: 1;
+      top: 60px;
+      visibility: visible;
+    }
+
+    #submenu li {
+      float: none;
+      width: 100%;
+    }
+
+    #submenu a {
+      background-color: var(--color-background-nav);
+      color: var(--color-text-nav);
+
+      display: flex;
+      justify-content: center;
+    }
+
+    #submenu a:hover {
+        color: var(--color-text-nav-hover);
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+    }
+
+    nav li {
+      float: left;
+      position: relative;
+      width: auto;
+    }
+
+    nav li:hover a {
+        color: var(--color-text-nav-hover);
+    }
+
+    nav a {
+    color: var(--color-text-nav);
+    text-decoration: none;
+    font-family: Campton;
+    font-size: var(----Headline3-large);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+    display: block;
+    padding: 15px 70px;
+    transition: all 0.25s ease;
+    }
+
+    nav a:active {
+        color: var(--color-text-nav-hover);
+    }
+
+    .shop {
+      display: flex;
+      align-items: center;
+
+      padding-right: 7%;
+    }
+
+    .shop li {
+      padding-inline: 20px;
+      list-style: none;
+    }
+
+    .shop li {
+      color: var(--black);
+      cursor: pointer;
+    }
+
+    .shop li:hover {
+      cursor: pointer;
+    }
+
+    .shopMenu {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .shop {
+      display: none;
+    }
+
+    .shopMenu li {
+      color: var(--black);
+      cursor: pointer;
+    }
+
+    .shopMenu li:hover {
+      cursor: pointer;
+    }
+    .banner {
+      background-color: var(--color-background-nav);
+      padding: 2rem;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      gap: 20px 40px;
+    }
+
+    .logo {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .menu {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .knapper {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .knapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #submenu {
+      margin-left: 15px;
+    }
+    .menu.shown a {
+      color: var(--color-text-nav);
+      text-decoration: none;
+      line-height: 1.5rem;
+    }
+
+    .menu.shown a:hover {
+      color:var(--color-text-nav-hover);
+    }
+
+    .toggle-btn {
+      display: block;
+    }
+
+    .toggle-btn span {
+      display: block;
+    }
+
+    .menu.shown {
+      display: contents;
+    }
+
+    .menu ul {
+      display: none;
+    }
+
+    .menu.shown > ul {
+      border-top: 1px solid var(--color-text-nav-hover);
+      padding-top: 1rem;
+    }
+
+    .menu.shown ul {
+      display: flex;
+      flex-flow: column;
+      flex-basis: 100%;
+      list-style: none;
+      gap: 12px;
+      font-size: 1.2rem;
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: var(--color-text-nav-hover);
+      margin: 6px 0;
+      border-radius: 5px;
+      transition: 0.4s;
+    }
+
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {
+      opacity: 0;
+    }
+
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+  }
+
+  @media (max-width: 431px) {
+    .logo a {
+        font-size: 0.8rem;
+        width: 130px;
+    }
+
+    .banner {
+        padding: 0.5rem
+    }
+    
+    .knapper {
+        display:none;
+    }
+
+    .lilleknap {
+        display:flex;
+        justify-content:flex-start;
+        width: 200px;
+    }
+
+  }
+</style>
