@@ -24,7 +24,9 @@ import Button from "../components/Button.astro";
     <li>Vi <span>vidensindsamler, laver undervisningsforløb og uddanner</span>, bl.a. børn og unge i landets folkeskoler og gymnasieuddannelser om plastikforurening, produktion og forbrug.</li>
 </ul>
 <p>Plastik er et grænseløst problem, og derfor arbejder vi også internationalt, så vi kan sikre, at de globale løsninger når frem til Danmark og omvendt.</p>
-<Button/>
+<div class="button">
+<Button variant="primary" link="/index.astro">Vær med til at stoppe plastikforurening</Button>
+</div>
 </div>
 </article>
 </section>
@@ -119,5 +121,9 @@ padding-bottom: 40px;
 .section_2{
     padding: 6rem;
     background-color: var(--color-background-section, #C5DBD8);
+}
+
+.button{
+  padding-top: 2rem;
 }
 </style>
