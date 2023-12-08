@@ -3,20 +3,28 @@ import Mainlayout from "../layout/Mainlayout.astro";
 
 ---
 <Mainlayout title="genbrug-over-genanvendelse">
-<section>
-    <h2>Hvad er løsningen?</h2>
+<section class="hero">
+    <h2 class="h2_hero">Hvad er løsningen?</h2>
     <h1>Genbrug over genanvendelse</h1>
 </section>
-<section>
-    <h2>Ansvaret ligger hos politikerne</h2>
+<section class="section_1">
+    <h2 class="h2_section">Ansvaret ligger hos politikerne</h2>
+    <article class="grid_1-1">
+    <div class="del1">
     <p>Alle i samfundet bærer et ansvar. Plastikforurening er et resultat af vores samfunds brug-og-smid-væk kultur. Producenter og industrien har forsynet forbrugere med plastikprodukter, som kan tilfredsstille øjeblikkets behov. 
         Uden at politikerne har sat nogle rammer for, hvordan disse produkter fremstilles og hvordan de skal skilles af med igen.
         Men hvilke tiltag skal der så til for at vi kan ændre på et folkefærdds forbuger vaner og et samfundmæssgit miljø problem?</p>
-    <h3>“Hvis vi skal løse problemerne med mikroplastik der tabes og spildes, skal industrien i langt højere grad på banen og holdes til ansvar for design af deres produkter. Vi vil have de danske politikere til at kræve handling i EU”</h3>
-<img src="" alt="genbrug vs genanvendelsescirkel">
+    </div>
+    <div class="del2">
+        <h3>“Hvis vi skal løse problemerne med mikroplastik der tabes og spildes, skal industrien i langt højere grad på banen og holdes til ansvar for design af deres produkter. Vi vil have de danske politikere til at kræve handling i EU”</h3>
+    </div>
+    </article>
+    <img src="/img/genbrugscirkel.svg" alt="genbrug vs genanvendelsescirkel">
 </section>
-<section>
-    <h2>Hvad kan genanvendelse? </h2>
+<section class="section_2">
+    <h2 class="h2_section">Hvad kan genanvendelse? </h2>
+    <article class="grid_1-1">
+        <div class="del1">
     <p>Genanvendelse forgår ved, at produkterne først nedbrydes eller findeles hvorefter der indvindes stoffer eller materialer fra de nedbrudte produkter. Materialerne kan derefter enten bruges ved fremstilling af samme type produkter som de oprindelige, eller til helt andre produkter.
         <br>
         I modsætning til genbrug, hvor produktet ikke nedbrydes først, handler genanvendelse om at indvinde ressourcerne i affaldet.
@@ -28,16 +36,113 @@ import Mainlayout from "../layout/Mainlayout.astro";
        <br>
         Der er et krav om at vi udleder mindre CO2, hvis vi arbejder cirkulært i stedet for at udvinde nye materialer sparer vi miljøet for en masse CO2.
         </p>
-    <h3>“Enhver nyttiggørelsesoperation, hvor affaldsmaterialer omforarbejdes til produkter, materialer eller stoffer, hvad entes de bruges til det oprindelige formål eller til andre formål. Kort sagt: Smelt om!”</h3>
+    </div>
+    <div class="del2">
+        <h3 class="citat_center1">“Enhver nyttiggørelsesoperation, hvor affaldsmaterialer omforarbejdes til produkter, materialer eller stoffer, hvad entes de bruges til det oprindelige formål eller til andre formål. Kort sagt: Smelt om!”</h3>
+    </div>
+    </article>
 </section>
-<section>
-    <h3>“Enhver proces, hvor produkter eller komponenter, der ikke er affald, bruges igen til det formål, som de var formet til. Kort sagt. Vask og brug igen!”</h3>
-    <h2>Genbrug er den sande vinder</h2>
+<section class="section_3">
+    <article class="grid_1-1">
+        <div class="del2">
+    <h3 class="citat_center2">“Enhver proces, hvor produkter eller komponenter, der ikke er affald, bruges igen til det formål, som de var formet til. Kort sagt. Vask og brug igen!”</h3>
+</div>
+<div class="del1">
+    <h2 class="h2_section">Genbrug er den sande vinder</h2>
+   
     <p>Plastikprodukter er ikke bare brugbare, de er smarte og holdbare, hvis bare de er produceret og bliver brugt korrekt.
        <br>
         Vi er nødt til at fokusere på at knække kurven for det stigende plastikforbrug og -forurening ved at reducere mængden af plastik i omløb og fremme genbrugsløsninger i stedet for en ”brug-og-smid-væk”-kultur, hvor vores dyrebare ressourcer ikke bliver brugt igen og igen. <br> Målet om at udfase engangsplastik og skabe bedre genbrugsløsninger er en del af alt, hvad vi laver.
         <br>
         Genbrug er, at man bruger det samme produkt (til det samme formål) mere end én gang - evt. ved hjælp af vask eller anden form for rengøring. Så når vi taler om genbrugsløsninger, er det hvad vi som individer selv kan gøre, og hvordan man kan bygge et helt system op, der opfordrer til at genbruge. Hvordan vi kan blive bedre og smartere til at bruge jordens ressourcer, dels fordi det reducerer mængden af CO2-udledninger, der er forbundet med produktion og affaldsforbrænding. Vi skal have fokus på, hvordan man kan skabe et indgroet system, hvor ansvaret for genbrug ikke kun hviler på individet.
         </p>
+    </div>
+    </article>
 </section>
 </Mainlayout>
+
+<style>
+    .hero{
+        background: var(--color-background-hero, #FF1054);
+        height: 553px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+       
+
+    }
+
+    .h2_hero{
+color: var( --color-text-h3-secondary);
+margin-inline: auto;
+    }
+
+    h1{
+        max-width: 1085px;
+        margin-inline: auto;
+    }
+
+    .section_1{
+        padding: 6rem;
+    }
+
+    .h2_section{
+     display: flex;
+max-width: 580px;
+padding: 10px 10px 10px 0px;
+align-items: flex-start;
+padding-bottom: 40px;
+
+
+    }
+
+    .grid_1-1{
+        display: grid;
+		grid-template-columns: 1fr 1fr;
+        display: flex;
+        max-width: 1512px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8rem;
+    
+       
+    }
+
+    .del1{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.4rem;
+        max-width: 600px;
+        height: 192px;
+    }
+
+    .del2{
+        max-width: 600px;
+        height: 456px;
+    }
+
+.section_2{
+    padding: 6rem;
+
+}
+
+.section_3{
+    padding: 6rem;
+    background-color: var(--color-background-section, #C5DBD8);
+}
+
+.citat_center1{
+padding-top: 5rem;
+}
+
+.citat_center2{
+padding-top: 12rem;
+}
+
+img{
+    max-width: 600px;
+    margin-inline: auto;
+}
+</style>
