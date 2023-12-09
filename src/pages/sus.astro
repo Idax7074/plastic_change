@@ -4,7 +4,7 @@ import Button from "../components/Button.astro"
 ---
 
 <MainLayout title="SingleUseSucks">
-<section>
+<section class="hero">
     <h1><span>#SingleUseSucks</span></h1>
 </section>
 
@@ -39,18 +39,18 @@ import Button from "../components/Button.astro"
         <p>
             Så hvad er løsningen på vores “throw away living” livstil?
         </p>
-        <Button variant="primary">Læs mere her</Button>
+        <Button variant="primary" link="/genbrug">Læs mere her</Button>
     </article>
 
     <article class="text">
-        <h2>Konsekvenser</h2>
+        <h2>Konsekvenserne</h2>
         <h3> 
             “Én ting er plastikforurening. Noget andet er de mange kemikalier, som plastikken er tilsat. Det er især dem, vi skal være bekymrede for.”
         </h3>
         <p>
             Så hvad er konsekvenserne egentlig for vores plastikforbrug?
         </p>
-        <Button variant="primary">Læs mere her</Button>
+        <Button variant="primary" link="/konsekvenser">Læs mere her</Button>
     </article>
     </div>
 </section>
@@ -58,6 +58,17 @@ import Button from "../components/Button.astro"
 
 <style>
 
+span {
+    font-size: 8.915rem;
+}
+
+.hero {
+    background-color: var(--color-background-hero);
+    height: 52.625rem;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .what {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
