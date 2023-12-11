@@ -28,8 +28,8 @@ import Button from "../components/Button.astro"
 	</section>
 
 	<section class="section2">
-		<article class="løsning">
-		<div class="text">
+		<article class="loesning">
+		<div class="text reverse">
 		<h2>Hvad er løsningen</h2>
 		<p>
 			I en verden hvor vi udleder 8 mio. tons affald i verdenshavene er det vigtigt at vi begynder at tænke over, hvordan vi bruger og ikke mindst genbruger vores plastik. <br>
@@ -39,7 +39,9 @@ import Button from "../components/Button.astro"
 		</p>
 		<Button variant="primary" link="/genbrug">Læs mere her</Button>
 		</div>
+		<div class="img">
 		<img src="/img/taanker.svg" alt="Tegning af en pige der er forvirret">
+		</div>
 		</article>
 	</section>
 </MainLayout>
@@ -68,7 +70,7 @@ import Button from "../components/Button.astro"
 		max-width: 1400px;
 	}
 
-	.løsning {
+	.loesning {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		justify-content: center;
@@ -79,7 +81,7 @@ import Button from "../components/Button.astro"
 		max-width: 1400px;
 	}
 
-	.løsning img {
+	.loesning img {
 		grid-column: 1;
 		grid-row: 1;
 	}
@@ -99,4 +101,78 @@ import Button from "../components/Button.astro"
 		padding-top: 6.25rem;
         padding-bottom: 6.25rem;
 	}
+	/*Tablet*/
+	@media (max-width: 1025px){
+		.sus {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 55rem;
+	
+		gap: 6rem;
+
+		max-width: 1025px;
+	}
+
+	img{
+		max-width: 20rem;
+	}
+	.loesning {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 55rem;
+		gap: 6rem;
+		max-width: 1025px;
+	}
+
+h1{
+    font-size: var(--Headline1-medium);
+}
+h2{
+    font-size: var(--Headline2-medium);
+}
+p {
+    font-size: var(--Body-medium);
+	}
+	}
+
+	/*Mobil*/
+@media (max-width: 431px){
+	.sus {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 25rem;
+	
+		gap: 6rem;
+
+		max-width: 431px;
+	}
+
+	img{
+		max-width: 15rem;
+		margin-inline: auto;
+	}
+	.loesning {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 25rem;
+		gap: 6rem;
+		max-width: 431px;
+	}
+
+	.reverse {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+h1{
+    font-size: var(--Headline1-small);
+}
+h2{
+    font-size: var(--Headline2-small);
+}
+p {
+    font-size: var(--Body-small);
+	}
+}
+
 </style>
