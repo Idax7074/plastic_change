@@ -13,7 +13,10 @@ import MainLayout from "../layout/MainLayout.astro"
 </section>
 
 <section class="section_1">
+     <div class="sektion">   
+    <div class="h2">
     <h2 class="h2_section">Det ender i havet</h2>
+    </div>
     <article class="grid_1-1">
         <div class="del1">
     <p>
@@ -39,15 +42,19 @@ import MainLayout from "../layout/MainLayout.astro"
         <img src="img/vandmand.svg" alt="Vandmænd som plastikposer">
     </div>
         <article>
+    </div> 
 </section>
 
 <section class="section_2">
+    <div class="sektion">
     <article class="grid_1-1">
         <div class="del1">
     <img src="/img/vandmand.svg" alt="En plastik fisk på en tallerken">
 </div>
 <div class="del2">
+    <div class="h2">
     <h2 class="h2_section">Det ender i os</h2>
+    </div>
     <p>
         Rigtig meget plastik ender i havet. Her bliver det til mikroplastik, som er små plastikpartikler på under 5mm.
         <br>
@@ -59,6 +66,7 @@ import MainLayout from "../layout/MainLayout.astro"
     </p>
 </div>
 </article>
+</div>
 </section>
 
 <section>
@@ -108,8 +116,17 @@ import MainLayout from "../layout/MainLayout.astro"
      padding: 10px 10px 10px 0px;
      align-items: flex-start;
      padding-bottom: 40px;
+    }
 
+    .h2 {
+        width: 81.8125rem;
+        display: flex;
+        justify-content: flex-start;
+    }
 
+    .sektion {
+        width: 81.8125rem; 
+        margin-inline: auto;
     }
 
     .grid_1-1{

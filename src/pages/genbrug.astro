@@ -1,14 +1,22 @@
 ---
-import Mainlayout from "../layout/Mainlayout.astro";
+import MainLayout from "../layout/MainLayout.astro";
 
 ---
-<Mainlayout title="genbrug-over-genanvendelse">
-<section class="hero">
+<MainLayout title="genbrug-over-genanvendelse">
+<section class="hero-section">
+    <div class="herotext">
+        <div class="heroh2">
     <h2 class="h2_hero">Hvad er løsningen?</h2>
+    </div>
     <h1>Genbrug over genanvendelse</h1>
+    </div>
 </section>
+
 <section class="section_1">
+    <div class="sektion">
+    <div class="h2">
     <h2 class="h2_section">Ansvaret ligger hos politikerne</h2>
+    </div>
     <article class="grid_1-1">
     <div class="del1">
     <p>Alle i samfundet bærer et ansvar. Plastikforurening er et resultat af vores samfunds brug-og-smid-væk kultur. Producenter og industrien har forsynet forbrugere med plastikprodukter, som kan tilfredsstille øjeblikkets behov. 
@@ -20,9 +28,14 @@ import Mainlayout from "../layout/Mainlayout.astro";
     </div>
     </article>
     <img src="/img/genbrugscirkel.svg" alt="genbrug vs genanvendelsescirkel">
+    </div>
 </section>
+
 <section class="section_2">
+    <div class="sektion">
+        <div class="h2">
     <h2 class="h2_section">Hvad kan genanvendelse? </h2>
+    </div>
     <article class="grid_1-1">
         <div class="del1">
     <p>Genanvendelse forgår ved, at produkterne først nedbrydes eller findeles hvorefter der indvindes stoffer eller materialer fra de nedbrudte produkter. Materialerne kan derefter enten bruges ved fremstilling af samme type produkter som de oprindelige, eller til helt andre produkter.
@@ -42,48 +55,53 @@ import Mainlayout from "../layout/Mainlayout.astro";
         <h3 class="citat_center1">“Enhver nyttiggørelsesoperation, hvor affaldsmaterialer omforarbejdes til produkter, materialer eller stoffer, hvad entes de bruges til det oprindelige formål eller til andre formål. Kort sagt: Smelt om!”</h3>
     </div>
     </article>
-</section>
-<section class="section_3">
-    <article class="grid_1-1">
-        <div class="del2">
-    <h3 class="citat_center2">“Enhver proces, hvor produkter eller komponenter, der ikke er affald, bruges igen til det formål, som de var formet til. Kort sagt. Vask og brug igen!”</h3>
 </div>
-<div class="del1">
-    <h2 class="h2_section">Genbrug er den sande vinder</h2>
-   
-    <p>Plastikprodukter er ikke bare brugbare, de er smarte og holdbare, hvis bare de er produceret og bliver brugt korrekt.
-       <br>
-        Vi er nødt til at fokusere på at knække kurven for det stigende plastikforbrug og -forurening ved at reducere mængden af plastik i omløb og fremme genbrugsløsninger i stedet for en ”brug-og-smid-væk”-kultur, hvor vores dyrebare ressourcer ikke bliver brugt igen og igen. <br> Målet om at udfase engangsplastik og skabe bedre genbrugsløsninger er en del af alt, hvad vi laver.
-    </p>
-        <p>
-        Genbrug er, at man bruger det samme produkt (til det samme formål) mere end én gang - evt. ved hjælp af vask eller anden form for rengøring. Så når vi taler om genbrugsløsninger, er det hvad vi som individer selv kan gøre, og hvordan man kan bygge et helt system op, der opfordrer til at genbruge. Hvordan vi kan blive bedre og smartere til at bruge jordens ressourcer, dels fordi det reducerer mængden af CO2-udledninger, der er forbundet med produktion og affaldsforbrænding. Vi skal have fokus på, hvordan man kan skabe et indgroet system, hvor ansvaret for genbrug ikke kun hviler på individet.
-    </p>    
-   
-    </div>
-    </article>
 </section>
+
+<section class="section_3">
+    <div class="sektion">
+    <article class="grid_1-1">
+        <div class="del1">
+            <h3 class="citat_center2">“Enhver proces, hvor produkter eller komponenter, der ikke er affald, bruges igen til det formål, som de var formet til. Kort sagt. Vask og brug igen!”</h3>
+        </div>
+        <div class="del2">
+            <div class="h2">
+                <h2 class="h2_section">Genbrug er den sande vinder</h2>
+            </div>
+            <p>
+                Plastikprodukter er ikke bare brugbare, de er smarte og holdbare, hvis bare de er produceret og bliver brugt korrekt.
+                <br>
+                Vi er nødt til at fokusere på at knække kurven for det stigende plastikforbrug og -forurening ved at reducere mængden af plastik i omløb og fremme genbrugsløsninger i stedet for en ”brug-og-smid-væk”-kultur, hvor vores dyrebare ressourcer ikke bliver brugt igen og igen.
+            </p>
+            <br>
+            <p>
+                Målet om at udfase engangsplastik og skabe bedre genbrugsløsninger er en del af alt, hvad vi laver. 
+                Genbrug er, at man bruger det samme produkt (til det samme formål) mere end én gang - evt. ved hjælp af vask eller anden form for rengøring. Så når vi taler om genbrugsløsninger, er det hvad vi som individer selv kan gøre, og hvordan man kan bygge et helt system op, der opfordrer til at genbruge. Hvordan vi kan blive bedre og smartere til at bruge jordens ressourcer, dels fordi det reducerer mængden af CO2-udledninger, der er forbundet med produktion og affaldsforbrænding. Vi skal have fokus på, hvordan man kan skabe et indgroet system, hvor ansvaret for genbrug ikke kun hviler på individet.
+            </p>
+        </div>
+    </article>
+</div>
+</section>
+
 </Mainlayout>
 
 <style>
-    .hero{
+    .hero-section{
         background: var(--color-background-hero, #FF1054);
         height: 553px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-       
-
+    }
+    
+    .herotext {
+        width: 61.625rem;
+        margin-inline: auto;
     }
 
     .h2_hero{
-color: var( --color-text-h3-secondary);
-margin-inline: auto;
-    }
-
-    h1{
-        max-width: 1085px;
-        margin-inline: auto;
+        color: var( --color-text-h3-secondary);
     }
 
     .section_1{
@@ -91,25 +109,24 @@ margin-inline: auto;
     }
 
     .h2_section{
-     display: flex;
-max-width: 580px;
-padding: 10px 10px 10px 0px;
-align-items: flex-start;
-padding-bottom: 40px;
+     padding-bottom: 40px;
+    }
 
+    .h2 {
+        width: 81.8125rem;
+        display: flex;
+        justify-content: flex-start;
+    }
 
+    .sektion {
+        width: 81.8125rem; 
+        margin-inline: auto;
     }
 
     .grid_1-1{
         display: grid;
 		grid-template-columns: 1fr 1fr;
-        display: flex;
-        max-width: 1512px;
-        justify-content: center;
-        align-items: flex-start;
         gap: 8rem;
-    
-       
     }
 
     .del1{
