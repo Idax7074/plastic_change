@@ -13,9 +13,7 @@ import Logo from "./Logo.astro";
 <div class="generelt">
 <h4>Generelt</h4>
 <a href="/om">Hvad vi vil</a>
-<br>
 <a href="/konsekvenser">Konsekvenserne af forbruget</a>
-<br>
 <a href="/genbrug">Hvad er løsningen?</a>
 <p>Presse</p>
 <p>Kontakt os</p>
@@ -84,12 +82,14 @@ box-shadow: 0px -10px 40px 0px rgba(217, 217, 217, 0.41);
 padding-top: 2rem;
 padding-bottom: 2rem;
 }
+p{
+    color: var(--color-text-footer);
+}
 .grid_1-1-1{
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 display: flex;
 width: 1512px;
-height: 580px;
 padding: 2rem 2.1rem;
 justify-content: center;
 align-items: flex-start;
@@ -128,7 +128,82 @@ a{
 color: var(--color-text-link);
 text-decoration: none;
 }
+
+/*Tablet*/
 @media (max-width: 1025px) {
+    .grid_1-1-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 1025px;
+        padding: 2rem 4.5rem;
+        gap: 3rem 1rem;
+        
+    }
+
+    .grid2_1-1-1{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 2rem;
+
+grid-column: span 2;
+}
+    .info{
+padding-bottom: 1rem;
+}
+
+.ikoner {
+    grid-column: 2;
+    grid-row: 1;
+}
+p, a {
+    font-size: var(--Body-medium);
+}
+h4{
+    font-size: var(--Headline4-medium);
+}
+
+.info p{
+    font-size: var(--Body-medium);
+}
 
 }
+/*Mobil*/
+@media (max-width: 431px){
+
+    .grid_1-1-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 431px;
+        padding: 2rem 4.5rem;
+        gap: 3rem 1rem;
+    }
+    .grid2_1-1-1{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+
+grid-column: span 0;
+    }
+
+p, a {
+    font-size: var(--Body-small);
+}
+h4{
+    font-size: var(  --Headline4-small);
+}
+
+.info p{
+    font-size: var(--Body-small);
+}
+
+.ikoner {
+
+    grid-row: 3;
+    grid-column: span 1;
+}
+}
+
+
+
+
 </style>
