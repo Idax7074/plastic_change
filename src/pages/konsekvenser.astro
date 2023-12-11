@@ -3,9 +3,13 @@ import MainLayout from "../layout/MainLayout.astro"
 ---
 
 <MainLayout tittle="Konsekvenserne-af-forbruget">
-<section class="hero">
+<section class="hero-section">
+    <div class="herotext">
+    <div class="heroh2">
     <h2 class="h2_hero">Et skadeligt aftryk</h2>
+    </div>
     <h1>Konsekvenserne af forbruget</h1>
+    </div>
 </section>
 
 <section class="section_1">
@@ -63,7 +67,7 @@ import MainLayout from "../layout/MainLayout.astro"
 </MainLayout>
 
 <style>
-    .hero{
+    .hero-section{
         background: var(--color-background-hero, #FF1054);
         height: 553px;
         display: flex;
@@ -74,9 +78,19 @@ import MainLayout from "../layout/MainLayout.astro"
 
     }
 
+    .herotext {
+        width: 61.0625rem;
+        margin-inline: auto;
+    }
+
     .h2_hero{
-color: var( --color-text-h3-secondary);
-margin-inline: auto;
+        color: var( --color-text-h3-secondary);
+    }
+
+    .heroh2 {
+        width: 61.0625rem;
+        display: flex;
+        justify-content: flex-start;
     }
 
     h1{
@@ -90,10 +104,10 @@ margin-inline: auto;
 
     .h2_section{
      display: flex;
-max-width: 580px;
-padding: 10px 10px 10px 0px;
-align-items: flex-start;
-padding-bottom: 40px;
+     max-width: 580px;
+     padding: 10px 10px 10px 0px;
+     align-items: flex-start;
+     padding-bottom: 40px;
 
 
     }

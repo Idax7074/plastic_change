@@ -1,11 +1,15 @@
 ---
 import Button from "../components/Button.astro"
+import Logo from "../components/Logo.astro"
 ---
 
 <header class="banner">
-  <div class="logo">
-    <a href="/">Plastic change</a>
-  </div>
+    <div class="logolarge"> 
+     <Logo size="large"/>
+ </div>
+ <div class="logosmall"> 
+    <Logo size="small"/>
+    </div>
   <nav class="menu">
     <button class="toggle-btn" aria-label="Burgermenu">
       <span class="bar1"></span>
@@ -50,6 +54,10 @@ import Button from "../components/Button.astro"
     height: auto;
   }
 
+  .logosmall {
+    display:none;
+  }
+
   .toggle-btn {
     background: transparent;
     border: none;
@@ -69,20 +77,6 @@ import Button from "../components/Button.astro"
     list-style: none;
   }
 
-  .logo a {
-    background: var(--color-icon-background-hover);
-    color: var(--color-icon-text-hover);
-
-    display: block;
-    width:175px;
-    padding: 20px;
-    text-decoration: none;
-    font-family: "NotoSans", sans-serif;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 100%;
-  }
 
   .knapper {
     display:block;
@@ -309,9 +303,13 @@ import Button from "../components/Button.astro"
   }
 
   @media (max-width: 431px) {
-    .logo a {
-        font-size: 0.8rem;
-        width: 130px;
+
+    .logolarge{
+        display: none;
+    }
+
+    .logosmall{
+        display: flex;
     }
 
     .banner {
@@ -319,7 +317,7 @@ import Button from "../components/Button.astro"
     }
     
     .knapper {
-        display:none;
+        display: none;
     }
 
     .lilleknap {
