@@ -51,7 +51,7 @@ import MainLayout from "../layout/MainLayout.astro"
         <div class="del1">
     <img src="/img/plastikfisk.svg" alt="En plastik fisk på en tallerken">
 </div>
-<div class="del2">
+<div class="del2 reverse">
     <h2 class="h2_section">Det ender i os</h2>
     <p>
         Rigtig meget plastik ender i havet. Her bliver det til mikroplastik, som er små plastikpartikler på under 5mm.
@@ -168,5 +168,146 @@ import MainLayout from "../layout/MainLayout.astro"
 }
 
 /*Tabelt*/
-@media (max-width: 1024px){}
+@media (max-width: 1025px){
+
+    .grid_1-1{
+        display: grid;
+		grid-template-columns: 1fr 1fr;
+        max-width: 20rem;
+		gap: 2rem;
+		max-width: 1025px;
+    }
+
+    .del1{
+     
+        gap: 2.4rem;
+        width: 25rem;
+        height: 192px;
+    }
+
+    .del2{
+        width: 25rem;
+        height: 456px;
+        padding-left: 0;
+    }
+
+    .section_1{
+        padding: 4rem;
+    }
+    .section_2{
+    padding: 4rem;
+    
+}
+    .sektion {
+        width: 865px;
+    }
+
+    h1{
+        max-width: 1025px;
+
+    }
+    .herotext {
+        width: 50rem;
+
+    }
+    .heroh2 {
+        width: 50rem;
+    
+    }
+
+    .h2 {
+        max-width: 25rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .del2 img{
+		max-width: 20rem;
+		margin-inline: auto;
+	}
+    .del1 img{
+		max-width: 20rem;
+		margin-inline: auto;
+	}
+    h1{
+    font-size: var(--Display-medium);
+}
+h2{
+    font-size: var(--Headline2-medium);
+}
+p {
+    font-size: var(--Body-medium);
+	}
+}
+
+ /*Mobil*/
+ @media (max-width: 431px){
+    .section_1{
+        padding: 4rem;
+    }
+    .section_2{
+        padding: 4rem;
+    }
+    .grid_1-1{
+		grid-template-columns: 1fr;
+		width: 20rem;
+		gap: 16rem;
+		max-width: 431px;
+    }
+
+    h1{
+       max-width: 431px;
+
+    }
+    .herotext {
+        width: 20rem;
+
+    }
+    .heroh2 {
+        width: 20rem;
+    
+    }
+
+    .h2 {
+        max-width: 18rem;
+    }
+
+    .sektion {
+        width: 300px; 
+       
+    }
+
+    .del1{
+   
+        gap: 4rem;
+        max-width: 300px;
+  
+    }
+
+    .del2{
+        max-width: 300px;
+        height: 400px;
+
+   
+    }
+
+    .reverse {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    h1{
+    font-size: var(--Display-small);
+}
+h2{
+    font-size: var(--Headline2-small);
+}
+h3{
+    font-size: var(--Headline3-small);
+}
+p {
+    font-size: var(--Body-small);
+	} 
+} 
+
 </style>

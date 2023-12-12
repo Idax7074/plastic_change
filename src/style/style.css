@@ -169,11 +169,3 @@ a{
   line-height: 150%;
 }
 
-Span{
-  font-family: "NotoSans", sans-serif;
-  font-size: var(--Display-large);
-  font-style: normal;
-  font-weight: 800;
-  line-height: 100%;
-  color: var(--color-text-display);
-}
