@@ -26,7 +26,10 @@ import Button from "../components/Button.astro"
 
 <section class="infografik">
     <h2>Hvad bliver plastik brugt til?</h2>
+    <div class="infografik_billede">
     <img src="img/diagram.svg" alt="Infografik om hvad plastikken går til">
+    <p>Knap 40% af den plastik, der produceres, er plastik til fødevareemballage. En stor andel heraf er engangsplastik.</p>
+</div>
 </section>
 
 <section class="section2">
@@ -76,11 +79,15 @@ span {
 		width: 94.5rem;
 		justify-content: center;
 		align-items: center;
-		gap: 19.1875rem;
-
+        gap: 5rem;
 		margin-inline: auto;
-		max-width: 1400px;
+		max-width: 85rem;
 	}
+
+    .what img{
+        max-width: 30rem;
+        margin-inline: auto;
+    }
 
     .text {
 		display: flex;
@@ -92,12 +99,18 @@ span {
     .infografik {
         width: 94.5rem;
         margin-inline: auto;
-		max-width: 1400px;
+		max-width: 85rem;
     }
 
     .infografik img {
-        width: 81.9375rem;
+        width: 70rem;
         height: 38.99231rem;
+        margin-inline: auto;
+    }
+
+    .infografik_billede{
+        width: 70rem;
+        margin-inline: auto;
     }
 
     .underemner{
@@ -106,10 +119,10 @@ span {
         width: 94.4375rem;
         justify-content: center;
         align-items: center;
-        gap: 9.75rem;
+        gap: 8rem;
 
         margin-inline: auto;
-		max-width: 1400px;
+		max-width: 85rem;
     }
 
     .section2 {
