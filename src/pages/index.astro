@@ -16,8 +16,9 @@ import Button from "../components/Button.astro"
 		<Formular/>
 	</section>
 
-	<section class="section1">
-		<article class="sus">
+	<section class="section_1">
+		<div class="section">
+		<article class="grid_1-1">
 		<div class="text">
 		<h2>#SingleUseSucks</h2>
 		<p>
@@ -25,14 +26,17 @@ import Button from "../components/Button.astro"
 			Plastik og især engangsplastik har vidtrækkende konsekvenser for klima, klodens ressourcer, biodiversitet, livet i havet og forurening samt menneskers sundhed.
 			Derfor er det vigtigt, at vi skrider ind nu og lukker for plastikhanen, inden det er for sent.
 		</p>
+		<br> <br>
 		<Button variant="primary" link="/sus">Læs mere her</Button>
 		</div>
 		<img src="/img/genbrugscirkel.svg" alt="Genbrugs cirkel">
 		</article>
+		</div>
 	</section>
 
 	<section class="section2">
-		<article class="loesning">
+		<div class="section">
+		<article class="grid_1-1">
 		<div class="text reverse">
 		<h2>Hvad er løsningen</h2>
 		<p>
@@ -41,12 +45,14 @@ import Button from "../components/Button.astro"
 			Vi skal sammen komme væk fra “brug-og-smid-væk-kulturen” da dette ikke bidrager til at genbruge, men derimod genanvende, og netop det at genanvende er en meget længere process der kun bidrager til mere CO2 udledning. <br>
 			Så hvad er den bedste løsning?
 		</p>
+		<br> <br>
 		<Button variant="primary" link="/genbrug">Hvad er den bedste løsning?</Button>
 		</div>
 		<div class="img">
 		<img src="/img/taanker.svg" alt="Tegning af en pige der er forvirret">
 		</div>
 		</article>
+		</div>
 	</section>
 </MainLayout>
 
@@ -54,7 +60,7 @@ import Button from "../components/Button.astro"
 	.herosection {
 		height: 52.625rem;
 		background: var(--color-background-hero);
-		
+		padding-top: 1rem;
 	}
 
 	.herosection h2 {
@@ -64,12 +70,11 @@ import Button from "../components/Button.astro"
 		margin-top: 2rem;
   
 	}
-
 	.reverse {
 		grid-column: 2;
 		grid-row: 1;
 	}
-.hero_text{
+	.hero_text{
 	width: 75rem;
 	margin-inline: auto;
 	display: flex;
@@ -78,52 +83,36 @@ import Button from "../components/Button.astro"
 	margin-top: 8rem;
 }
 
-.herounit {
+	.herounit {
 	max-width: 85rem;
-}
-
-	.sus {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		width: 94.5rem;
-		justify-content: center;
-		align-items: center;
-		gap: 8rem;
-		margin-inline: auto;
-		max-width: 85rem;
-		margin-top: 2rem;
 	}
 
-	.loesning {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		justify-content: center;
-		align-items: center;
-		gap: 8rem;
-
-		margin-inline: auto;
-		max-width: 85rem;
-		margin-top: 2rem;
+	h2 {
+		padding-bottom: 40px;
 	}
 
-	
+	.grid_1-1{
+        display: grid;
+		grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+
+	.section {
+        width: 81.8125rem; 
+        margin-inline: auto;
+    }
+
+	.section_1 {
+        padding-top: 9.375rem;
+    }
+    section {
+        padding-inline: 2rem;
+        padding-bottom: 9.375rem;
+    }
 
 	.section2 {
+		padding-block: 4rem;
 		background-color: var(--color-background-section);
-	}
-
-	
-
-	.text {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 2.5rem;
-	}
-
-    section {
-		padding-top: 6.25rem;
-        padding-bottom: 6.25rem;
 	}
 
 	img{
@@ -133,34 +122,7 @@ import Button from "../components/Button.astro"
 
 	/*Tablet*/
 	@media (max-width: 1025px){
-
-		.hero_text{
-	width: 55rem;
-	margin-top: 8rem;
-}
-
-		.sus {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		width: 55rem;
-	
-		gap: 6rem;
-
-		max-width: 1025px;
-	}
-
-	img{
-		max-width: 20rem;
-	}
-	.loesning {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		width: 55rem;
-		gap: 6rem;
-		max-width: 1025px;
-	}
-
-h1{
+		h1{
     font-size: var(--Display-medium);
 }
 h2{
@@ -169,46 +131,84 @@ h2{
 p {
     font-size: var(--Body-medium);
 	}
+		.hero_text{
+	width: 55rem;
+	margin-top: 8rem;
+}
+
+.section{
+        width: 52.625rem;
+    }
+	section {
+        padding-inline: 2rem;
+        padding-bottom: 6rem;
+    }
+
+
+    .section_1 {
+        padding-top: 6rem;
+    }
+
+	.section2 {
+        padding-block: 6rem;
+    }
+
+	img{
+		max-width: 20rem;
+	}
+
 	}
 
 	/*Mobil*/
 @media (max-width: 431px){
+
+	h1{
+    font-size: var(--Display-small);
+}
+h2{
+    font-size: var(--Headline2-small);
+}
+p {
+    font-size: var(--Body-small);
+	}
+
 	.herosection {
-		height:40rem;
-	
-		
+		height:40rem;	
 	}
 	.hero_text{
 	width: 25rem;
 	margin-top: 8rem;
 }
-.herosection h2 {
-	
+	.herosection h2 {
 		width: 25rem;
-		max-width: 25rem;
-	
-  
+		max-width: 25rem;  
 	}
-	.sus {
-		display: grid;
-		grid-template-columns: 1fr;
-		width: 25rem;
-	
-		gap: 6rem;
 
-		max-width: 431px;
-	}
+	.grid_1-1 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+	.section{
+        width: 20rem;
+    }
+
+	section {
+        padding-inline: 1rem;
+        padding-bottom: 4rem;
+    }
+
+    .section_1 {
+        padding-top: 4rem;
+    }
+
+    .section2 {
+        padding-block: 2rem;
+    }
 
 	img{
 		max-width: 15rem;
 		margin-inline: auto;
-	}
-	.loesning {
-		display: grid;
-		grid-template-columns: 1fr;
-		width: 25rem;
-		gap: 6rem;
-		max-width: 431px;
 	}
 
 	.reverse {
@@ -219,16 +219,6 @@ p {
 	.loesning img {
 		grid-column: 1;
 		grid-row: 1;
-	}
-
-h1{
-    font-size: var(--Display-small);
-}
-h2{
-    font-size: var(--Headline2-small);
-}
-p {
-    font-size: var(--Body-small);
 	}
 }
 

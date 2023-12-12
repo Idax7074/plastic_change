@@ -9,36 +9,41 @@ import Button from "../components/Button.astro"
 </section>
 
 <section>
-    <article class="what">
+    <div class="section">
+    <article class="what grid_1-1 grid1">
         <div class="text">
     <h2>Hvad er Single Use?</h2>
     <p>
         Vi har sagt det før og vi siger det igen: plastik er et fantastisk materiale, der har en masse fordele, og gør livet lettere for os alle sammen. <br>
         Plastik har dog også en slagside, idet det vi siden 1950’erne har produceret mere end 9 milliarder ton plastik. Størstedelen bliver brugt til engangsemballager og -produkter med kort levetid og lav markedsværdi, selvom plastmaterialet egentligt kan holde i mange år. 
-
+        <br> <br>
         Det har ført til, at vi indenfor de næste 20 år forventer, at den globale plastikproduktion fordobles, og i samme periode forventes plastikforureningen at firedobles. 
         Plastik og især engangsplastik er grunden til at vi ser plastikforurening og mikroplastik i alle verdens afkroge, i maver på uskyldige dyr og nu senest ophober den sig flere og flere steder i menneskekroppen.
     </p>
     </div>
     <img src="/img/skraldebunke.svg" alt="Affaldsbunke">
     </article>
+    </div>
 </section>
 
 <section class="infografik">
+    <div class="section">
     <h2>Hvad bliver plastik brugt til?</h2>
     <div class="infografik_billede">
     <img src="img/diagram.svg" alt="Infografik om hvad plastikken går til">
     <p>Knap 40% af den plastik, der produceres, er plastik til fødevareemballage. En stor andel heraf er engangsplastik.</p>
 </div>
+</div>
 </section>
 
 <section class="section2">
-    <div class="underemner">
+    <div class=" section grid_1-1">
         <article class="text">
             <h2>Konsekvenserne</h2>
             <h4> 
                 "Én ting er plastikforurening. Noget andet er de mange kemikalier, som plastikken er tilsat. Det er især dem, vi skal være bekymrede for."
             </h4>
+            <br>
             <p>
                 Så hvad er konsekvenserne egentlig for vores plastikforbrug?
             </p>
@@ -49,6 +54,7 @@ import Button from "../components/Button.astro"
         <h4> 
             "Faktisk er det meget begrænset, hvad den almindelige borger kan gøre for at bremse de største kilder til mikroplastikspild og forurening."
         </h4>
+        <br> 
         <p>
             Så hvad er løsningen på vores “throw away living” livstil?
         </p>
@@ -73,16 +79,28 @@ span {
     justify-content: center;
     align-items: center;
 }
-.what {
+.grid_1-1 {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		width: 94.5rem;
-		justify-content: center;
-		align-items: center;
-        gap: 5rem;
-		margin-inline: auto;
-		max-width: 85rem;
+		gap: 5rem;
 	}
+
+    h2 {
+        padding-bottom: 40px;
+    }
+
+    .section {
+        width: 81.8125rem; 
+        margin-inline: auto;
+    }
+
+    .section_1 {
+        padding-top: 9.375rem;
+    }
+    section {
+        padding-inline: 2rem;
+        padding-bottom: 9.375rem;
+    }
 
     .what img{
         max-width: 30rem;
@@ -108,19 +126,6 @@ span {
         margin-inline: auto;
     }
 
-
-    .underemner{
-        display: grid;
-		grid-template-columns: 1fr 1fr;
-        width: 94.4375rem;
-        justify-content: center;
-        align-items: center;
-        gap: 8rem;
-
-        margin-inline: auto;
-		max-width: 85rem;
-    }
-
     .section2 {
 		background-color: var(--color-background-section);
 	}
@@ -130,30 +135,42 @@ span {
         padding-bottom: 6.25rem;
 	}
 
+    .section{
+        width: 52.625rem;
+    }
+
     h4{
         color: var(--color-text-h3);
     }
 
     /*Tablet*/
 	@media (max-width: 1025px){
+
+        h2{
+    font-size: var(--Headline2-medium);
+}
+    h3{
+    font-size: var(--Headline3-medium);
+    }
+    p {
+    font-size: var(--Body-medium);
+	}
         span {
     font-size: var(--Display-large);
 }
-.what{
-		grid-template-columns: 1fr 1fr;
-		width: 55rem;
-		gap: 6rem;
-		max-width: 1025px;
-}
-.what img{
+    .what img{
 		max-width: 20rem;
 	}
-     .underemner{
-		grid-template-columns: 1fr 1fr;
-		width: 55rem;
-		gap: 6rem;
-		max-width: 1025px;
-     }
+
+    section {
+        padding-inline: 2rem;
+        padding-bottom: 6rem;
+    }
+
+
+    .section_1 {
+        padding-top: 6rem;
+    }
 
      .infografik {
         width: 55rem;
@@ -166,66 +183,11 @@ span {
         max-width: 1025px;
     }
 
- 
-h2{
-    font-size: var(--Headline2-medium);
-}
-h3{
-    font-size: var(--Headline3-medium);
-}
-p {
-    font-size: var(--Body-medium);
-	}
-
+    }
 
 /*Mobil*/
 @media (max-width: 431px){
-    span {
-    font-size: var(--Display-medium);
-}
-.what{
-		grid-template-columns: 1fr;
-		width: 20rem;
-		gap: 4rem;
-		max-width: 431px;
-        
-}
-
-.infografik p{
-  padding-bottom: 4rem;
-}
-.what img{
-    max-width: 15rem;
-		margin-inline: auto;
-	}
-     .underemner{
-		grid-template-columns: 1fr;
-		width: 20rem;
-		gap: 6rem;
-		max-width: 431px;
-        padding-bottom: 4rem;
-     }
-
-     .infografik {
-        width: 20rem;
-        margin-inline: auto;
-		max-width: 431px;
-        
-    }
-
-    .infografik img {
-        width: 20rem;
-        max-width: 431px;
-        height: 15rem;
-    }
-
-    section {
-		padding-top: 6.25rem;
-        padding-bottom: 0rem;
-	}
-
- 
-h2{
+    h2{
     font-size: var(--Headline2-small);
 }
 h3{
@@ -234,7 +196,48 @@ h3{
 p {
     font-size: var(--Body-small);
 	}
+    span {
+    font-size: var(--Display-medium);
 }
+.grid_1-1{
+		grid-template-columns: 1fr;
+		gap: 2rem;
+        
+}
+
+.what img{
+    max-width: 15rem;
+		margin-inline: auto;
+	}
+
+    .infografik img {
+        width: 20rem;
+        max-width: 431px;
+        height: 15rem;
+    }
+
+    section {
+        padding-inline: 1rem;
+        padding-bottom: 4rem;
+    }
+
+    .section_1 {
+        padding-top: 4rem;
+    }
+
+    .section{
+        width: 20rem;
+        margin-inline: ;
+    }
+
+    .infografik {
+        width: 20rem;
+    }
+
+    .text {
+        gap: 1rem;
+    }
+
 
     }
 </style>
