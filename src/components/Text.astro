@@ -17,12 +17,9 @@
   <style>
 
     span{
-        font-family: "NotoSans", sans-serif;
+
   font-size: var(--Display-large);
-  font-style: normal;
-  font-weight: 800;
-  line-height: 100%;
-  color: var(--color-text-display);
+
     }
     .wrapper{
 	width: 100%;
@@ -118,5 +115,34 @@
 	display: block;
 	text-indent: 0px;
 }
+}
+@media (max-width: 1025px){
+    .wrapper{
+    max-width: 55rem;
+}
+.words span{
+	width: 50%;
+
+}
+span{
+  font-size: var(--Display-medium);
+}
+}
+
+@media (max-width: 431px){
+    .words{
+	display: inline;
+	text-indent: 10px;
+}
+    .wrapper{
+    max-width: 25rem;
+}
+.words span{
+	width: auto;
+}
+span{
+  font-size: var(--Display-small);
+}
+
 }
   </style>

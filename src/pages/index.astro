@@ -64,6 +64,11 @@ import Button from "../components/Button.astro"
 		margin-top: 2rem;
   
 	}
+
+	.reverse {
+		grid-column: 2;
+		grid-row: 1;
+	}
 .hero_text{
 	width: 75rem;
 	margin-inline: auto;
@@ -99,10 +104,7 @@ import Button from "../components/Button.astro"
 		max-width: 85rem;
 	}
 
-	.loesning img {
-		grid-column: 1;
-		grid-row: 1;
-	}
+	
 
 	.section2 {
 		background-color: var(--color-background-section);
@@ -127,6 +129,12 @@ import Button from "../components/Button.astro"
 
 	/*Tablet*/
 	@media (max-width: 1025px){
+
+		.hero_text{
+	width: 55rem;
+	margin-top: 8rem;
+}
+
 		.sus {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -149,7 +157,7 @@ import Button from "../components/Button.astro"
 	}
 
 h1{
-    font-size: var(--Headline1-medium);
+    font-size: var(--Display-medium);
 }
 h2{
     font-size: var(--Headline2-medium);
@@ -161,6 +169,22 @@ p {
 
 	/*Mobil*/
 @media (max-width: 431px){
+	.herosection {
+		height:40rem;
+	
+		
+	}
+	.hero_text{
+	width: 25rem;
+	margin-top: 8rem;
+}
+.herosection h2 {
+	
+		width: 25rem;
+		max-width: 25rem;
+	
+  
+	}
 	.sus {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -188,8 +212,13 @@ p {
 		grid-row: 1;
 	}
 
+	.loesning img {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
 h1{
-    font-size: var(--Headline1-small);
+    font-size: var(--Display-small);
 }
 h2{
     font-size: var(--Headline2-small);
