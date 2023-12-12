@@ -1,8 +1,8 @@
 ---
-const {variant, size, link} = Astro.props
+const {variant, link} = Astro.props
 ---
 
-<button class={variant}> <a class={size} href={link}><slot/></a> </button>
+<button class={variant}> <a href={link}><slot/></a> </button>
 
 
 
@@ -83,6 +83,13 @@ const {variant, size, link} = Astro.props
 
     .large {
         font-size: var(--Label-large);
+    }
+
+    @media screen and (max-width: 431px){
+        .primary a{
+            font-size: var(--Label-small)
+        }
+    }
     }
     
 </style>

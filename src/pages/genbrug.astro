@@ -18,12 +18,13 @@ import MainLayout from "../layout/MainLayout.astro";
     <h2 class="h2_section">Ansvaret ligger hos politikerne</h2>
     </div>
     <article class="grid_1-1">
-    <div class="del1">
+    <div class="del-1">
     <p>Alle i samfundet bærer et ansvar. Plastikforurening er et resultat af vores samfunds brug-og-smid-væk kultur. Producenter og industrien har forsynet forbrugere med plastikprodukter, som kan tilfredsstille øjeblikkets behov. 
         Uden at politikerne har sat nogle rammer for, hvordan disse produkter fremstilles og hvordan de skal skilles af med igen.
         Men hvilke tiltag skal der så til for at vi kan ændre på et folkefærdds forbuger vaner og et samfundmæssgit miljø problem?</p>
     </div>
-    <div class="del2">
+    <div class="del-2 quote">
+        <div class="streg"></div>
         <h3>“Hvis vi skal løse problemerne med mikroplastik der tabes og spildes, skal industrien i langt højere grad på banen og holdes til ansvar for design af deres produkter. Vi vil have de danske politikere til at kræve handling i EU”</h3>
     </div>
     </article>
@@ -51,8 +52,10 @@ import MainLayout from "../layout/MainLayout.astro";
         Der er et krav om at vi udleder mindre CO2, hvis vi arbejder cirkulært i stedet for at udvinde nye materialer sparer vi miljøet for en masse CO2.
         </p>
     </div>
-    <div class="del2">
-        <h3 class="citat_center1">“Enhver nyttiggørelsesoperation, hvor affaldsmaterialer omforarbejdes til produkter, materialer eller stoffer, hvad entes de bruges til det oprindelige formål eller til andre formål. Kort sagt: Smelt om!”</h3>
+    <div class="del2 quote center">
+        <div class="streg"></div>
+        <h3>“Enhver nyttiggørelsesoperation, hvor affaldsmaterialer omforarbejdes til produkter, materialer eller stoffer, hvad entes de bruges til det oprindelige formål eller til andre formål. Kort sagt: Smelt om!”</h3>
+
     </div>
     </article>
 </div>
@@ -61,8 +64,9 @@ import MainLayout from "../layout/MainLayout.astro";
 <section class="section_3">
     <div class="sektion">
     <article class="grid_1-1">
-        <div class="del1">
-            <h3 class="citat_center2">“Enhver proces, hvor produkter eller komponenter, der ikke er affald, bruges igen til det formål, som de var formet til. Kort sagt. Vask og brug igen!”</h3>
+        <div class="del1 quote center">
+            <div class="streg"></div>
+            <h3>“Enhver proces, hvor produkter eller komponenter, der ikke er affald, bruges igen til det formål, som de var formet til. Kort sagt. Vask og brug igen!”</h3>
         </div>
         <div class="del2">
                 <h2 class="h2_section">Genbrug er den sande vinder</h2>
@@ -142,6 +146,23 @@ import MainLayout from "../layout/MainLayout.astro";
         height: 456px;
     }
 
+    .quote {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .streg {
+        width: 0.9325rem;
+        height: 7rem;
+        background: var(--color-text-h-3, #FF1054);
+    }
+
+    .center {
+        align-items: center;
+    }
+
+
 .section_2{
     padding: 6rem;
 
@@ -152,16 +173,37 @@ import MainLayout from "../layout/MainLayout.astro";
     background-color: var(--color-background-section, #C5DBD8);
 }
 
-.citat_center1{
-padding-top: 8rem;
-}
-
-.citat_center2{
-padding-top: 15rem;
-}
-
 img{
-    max-width: 600px;
     margin-inline: auto;
+}
+
+@media (max-width: 1025px){
+    h1{
+    font-size: var(--Display-medium);
+    }
+    h2{
+    font-size: var(--Headline2-medium);
+    }
+    h3 {
+        font-size: var(--Headline3-medium);
+    }
+    p {
+    font-size: var(--Body-medium);
+	}
+    .sektion{
+        width: 52.625rem;
+    }
+
+    .h2 {
+        width: auto;
+    }
+
+    .del1 {
+        height: 450px;
+    }
+
+    .herotext {
+        width: 52.625rem;
+    }
 }
 </style>
