@@ -17,7 +17,7 @@ import MainLayout from "../layout/MainLayout.astro";
     <div class="h2">
     <h2 class="h2_section">Ansvaret ligger hos politikerne</h2>
     </div>
-    <article class="grid_1-1">
+    <article class="grid_1-1 grid1">
     <div class="del-1">
     <p>Alle i samfundet bærer et ansvar. Plastikforurening er et resultat af vores samfunds brug-og-smid-væk kultur. Producenter og industrien har forsynet forbrugere med plastikprodukter, som kan tilfredsstille øjeblikkets behov. 
         Uden at politikerne har sat nogle rammer for, hvordan disse produkter fremstilles og hvordan de skal skilles af med igen.
@@ -28,6 +28,14 @@ import MainLayout from "../layout/MainLayout.astro";
         <h3>“Hvis vi skal løse problemerne med mikroplastik der tabes og spildes, skal industrien i langt højere grad på banen og holdes til ansvar for design af deres produkter. Vi vil have de danske politikere til at kræve handling i EU”</h3>
     </div>
     </article>
+    </div>
+</section>
+
+<section>
+    <div class="sektion">
+        <div class="h2">
+    <h2 class="h2-genbrug">Genanvendelse vs. genbrug</h2>
+    </div>
     <img src="/img/genanveldelsecirkel.svg" alt="genbrug vs genanvendelsescirkel">
     </div>
 </section>
@@ -37,7 +45,7 @@ import MainLayout from "../layout/MainLayout.astro";
         <div class="h2">
     <h2 class="h2_section">Hvad kan genanvendelse? </h2>
     </div>
-    <article class="grid_1-1">
+    <article class="grid_1-1 grid2">
         <div class="del1">
     <p>Genanvendelse forgår ved, at produkterne først nedbrydes eller findeles hvorefter der indvindes stoffer eller materialer fra de nedbrudte produkter. Materialerne kan derefter enten bruges ved fremstilling af samme type produkter som de oprindelige, eller til helt andre produkter.
         I modsætning til genbrug, hvor produktet ikke nedbrydes først, handler genanvendelse om at indvinde ressourcerne i affaldet.
@@ -63,12 +71,12 @@ import MainLayout from "../layout/MainLayout.astro";
 
 <section class="section_3">
     <div class="sektion">
-    <article class="grid_1-1">
+    <article class="grid_1-1 grid3">
         <div class="del1 quote center">
             <div class="streg"></div>
             <h3>“Enhver proces, hvor produkter eller komponenter, der ikke er affald, bruges igen til det formål, som de var formet til. Kort sagt. Vask og brug igen!”</h3>
         </div>
-        <div class="del2">
+        <div class="del2 reverse">
                 <h2 class="h2_section">Genbrug er den sande vinder</h2>
             <p>
                 Plastikprodukter er ikke bare brugbare, de er smarte og holdbare, hvis bare de er produceret og bliver brugt korrekt.
@@ -106,9 +114,10 @@ import MainLayout from "../layout/MainLayout.astro";
         color: var( --color-text-h3-secondary);
     }
 
-    .section_1{
-        padding: 6rem;
+    .h2-genbrug {
+        padding-bottom: 3rem;
     }
+
 
     .h2_section{
      padding-bottom: 40px;
@@ -138,7 +147,7 @@ import MainLayout from "../layout/MainLayout.astro";
         align-items: flex-start;
         gap: 2.4rem;
         max-width: 600px;
-        height: 192px;
+        height: 450px;
     }
 
     .del2{
@@ -162,20 +171,20 @@ import MainLayout from "../layout/MainLayout.astro";
         align-items: center;
     }
 
-
-.section_2{
-    padding: 6rem;
-
-}
-
-.section_3{
-    padding: 6rem;
-    background-color: var(--color-background-section, #C5DBD8);
-}
-
-img{
-    margin-inline: auto;
-}
+    .section_1 {
+        padding-top: 9.375rem;
+    }
+    section {
+        padding-inline: 2rem;
+        padding-bottom: 9.375rem;
+    }
+    .section_3{
+        padding-block: 4rem;
+        background-color: var(--color-background-section, #C5DBD8);
+    }
+    img{
+        margin-inline: auto;
+    }
 
 @media (max-width: 1025px){
     h1{
@@ -204,6 +213,97 @@ img{
 
     .herotext {
         width: 52.625rem;
+    }
+
+    section {
+        padding-inline: 2rem;
+        padding-bottom: 6rem;
+    }
+
+
+    .section_1 {
+        padding-top: 6rem;
+    }
+
+    .section_3 {
+        padding-block: 6rem;
+    }
+}
+
+@media (max-width: 431px){
+    h1{
+    font-size: var(--Display-small);
+    }
+    h2{
+    font-size: var(--Headline2-small);
+    }
+    h3 {
+        font-size: var(--Headline3-small);
+    }
+    p {
+    font-size: var(--Body-small);
+	}
+    .sektion{
+        width: 20rem;
+    }
+
+    .h2 {
+        width: auto;
+    }
+
+    .del1 {
+        height: 450px;
+    }
+
+    .herotext {
+        width: 20rem;
+    }
+
+    .grid_1-1 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .grid1 {
+        grid-template-rows: 135px 115px;
+    }
+
+    .grid2 {
+        grid-template-rows: 430px 100px;
+    }
+
+    .grid3 {
+        grid-template-rows: 450px 80px;
+    }
+
+    .del2 {
+        height: auto;
+    }
+
+    .del1 {
+        height: auto;
+    }
+
+    section {
+        padding-inline: 1rem;
+        padding-bottom: 4rem;
+    }
+
+    .section_1 {
+        padding-top: 4rem;
+    }
+
+    .section_3 {
+        padding-block: 2rem;
+    }
+
+    .center {
+        align-items: start;
+    }
+
+    .reverse {
+        grid-column: 1;
+        grid-row: 1;
     }
 }
 </style>

@@ -15,8 +15,8 @@ import Logo from "../components/Logo.astro"
       <li>
         <a href="/sus">#SingleUseSucks</a>
         <ul id="submenu">
-          <li><a href="/konsekvenser">Konsekvenserne af forbruget</a></li>
-          <li><a href="/genbrug">Genbrug over genanvendelse</a></li>
+          <li><a href="/konsekvenser">Konsekvenserne</a></li>
+          <li><a href="/genbrug">Hvad er løsningen?</a></li>
         </ul>
       </li>
       <li><a href="/om">Hvad vi vil</a></li>
@@ -295,14 +295,16 @@ import Logo from "../components/Logo.astro"
     }
 
     .knapper {
-        display:flex;
-        justify-content:flex-start;
-        width: 200px;
+        width: 125px;
     }
 
-    .menu.shown ul{
+    .toggle-btn {
       grid-column: 1;
       grid-row: 1;
+    }
+
+    .banner {
+      gap: 10px 0px;
     }
     
   }
