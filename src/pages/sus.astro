@@ -8,7 +8,7 @@ import Button from "../components/Button.astro"
     <h1><span>#SingleUseSucks</span></h1>
 </section>
 
-<section>
+<section class="section1">
     <div class="section">
     <article class="what grid_1-1 grid1">
         <div class="text">
@@ -80,98 +80,83 @@ span {
     align-items: center;
 }
 .grid_1-1 {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
 	}
 
-    h2 {
-        padding-bottom: 40px;
-    }
+h2 {
+    padding-bottom: 40px;
+}
 
-    .section {
-        width: 81.8125rem; 
-        margin-inline: auto;
-    }
+.section {
+    width: 81.8125rem; 
+    margin-inline: auto;
+}
 
-    .section_1 {
-        padding-top: 9.375rem;
-    }
-    section {
-        padding-inline: 2rem;
-        padding-bottom: 9.375rem;
-    }
+.section1 {
+    padding-top: 9.375rem;
+}
+section {
+    padding-inline: 2rem;
+    padding-bottom: 9.375rem;
+}
+.what img{
+    max-width: 30rem;
+    margin-inline: auto;
+}
 
-    .what img{
-        max-width: 30rem;
-        margin-inline: auto;
-    }
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2.5rem;
+}
 
-    .text {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 2.5rem;
-	}
+.infografik {
+    width: 94.5rem;
+    margin-inline: auto;
+	max-width: 85rem;
+}
 
-    .infografik {
-        width: 94.5rem;
-        margin-inline: auto;
-		max-width: 85rem;
-    }
+.infografik img {
+    width: 70rem;
+    height: 38.99231rem;
+    margin-inline: auto;
+}
 
-    .infografik img {
-        width: 70rem;
-        height: 38.99231rem;
-        margin-inline: auto;
-    }
-
-    .section2 {
-		background-color: var(--color-background-section);
-	}
-
-    section {
-		padding-top: 6.25rem;
-        padding-bottom: 6.25rem;
-	}
-
-    .section{
-        width: 52.625rem;
-    }
-
-    h4{
-        color: var(--color-text-h3);
-    }
+.section2 {
+    padding-block: 4rem;
+	background-color: var(--color-background-section);
+}
+h4{
+    color: var(--color-text-h3);
+}
 
     /*Tablet*/
-	@media (max-width: 1025px){
-
-        h2{
-    font-size: var(--Headline2-medium);
-}
+@media (max-width: 1025px){
+    h2{
+        font-size: var(--Headline2-medium);
+    }
     h3{
-    font-size: var(--Headline3-medium);
+        font-size: var(--Headline3-medium);
     }
     p {
-    font-size: var(--Body-medium);
+        font-size: var(--Body-medium);
 	}
-        span {
-    font-size: var(--Display-large);
-}
+    span {
+        font-size: var(--Display-large);
+    }
     .what img{
 		max-width: 20rem;
 	}
-
     section {
         padding-inline: 2rem;
         padding-bottom: 6rem;
     }
-
-
-    .section_1 {
+    .section1 {
         padding-top: 6rem;
     }
-
      .infografik {
         width: 55rem;
         margin-inline: auto;
@@ -183,30 +168,29 @@ span {
         max-width: 1025px;
     }
 
-    }
+}
 
 /*Mobil*/
 @media (max-width: 431px){
     h2{
-    font-size: var(--Headline2-small);
-}
-h3{
-    font-size: var(--Headline3-small);
-}
-p {
-    font-size: var(--Body-small);
+        font-size: var(--Headline2-small);
+    }
+    h3{
+        font-size: var(--Headline3-small);
+    }
+    p {
+        font-size: var(--Body-small);
 	}
     span {
-    font-size: var(--Display-medium);
-}
-.grid_1-1{
+        font-size: var(--Display-medium);
+    }
+    .grid_1-1{
 		grid-template-columns: 1fr;
 		gap: 2rem;
-        
-}
+    }
 
-.what img{
-    max-width: 15rem;
+    .what img{
+        max-width: 15rem;
 		margin-inline: auto;
 	}
 
@@ -221,8 +205,12 @@ p {
         padding-bottom: 4rem;
     }
 
-    .section_1 {
+    .section1 {
         padding-top: 4rem;
+    }
+
+    .section2 {
+        padding-block: 2rem;
     }
 
     .section{
@@ -237,7 +225,5 @@ p {
     .text {
         gap: 1rem;
     }
-
-
-    }
+}
 </style>
