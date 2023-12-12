@@ -104,7 +104,7 @@ import Button from "../components/Button.astro";
     }
 
     .h2 {
-        width: 81.8125rem;
+        max-width: 35rem;
         display: flex;
         justify-content: flex-start;
     }
@@ -118,7 +118,7 @@ import Button from "../components/Button.astro";
         display: grid;
 		grid-template-columns: 1fr 1fr;
         display: flex;
-        max-width: 1512px;
+        max-width: 85rem;
         justify-content: center;
         align-items: flex-start;
         gap: 8rem;
@@ -141,7 +141,7 @@ import Button from "../components/Button.astro";
     }
 
     span{
-        color: var(  --color-text-h3);
+        color: var( --color-text-h3);
     }
 
     ul{
@@ -155,5 +155,127 @@ import Button from "../components/Button.astro";
 
 .button{
   padding-top: 2rem;
+}
+
+ /*Tablet*/
+ @media (max-width: 1025px){
+    .grid_1-1{
+        display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 55rem;
+		gap: 6rem;
+		max-width: 1025px;
+    }
+
+ 
+    h1{
+        max-width: 1025px;
+
+    }
+    .herotext {
+        width: 50rem;
+
+    }
+    .heroh2 {
+        width: 50rem;
+    
+    }
+
+    .h2 {
+        max-width: 25rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .sektion {
+        width: 865px; 
+       
+    }
+    ul{
+        padding-left: 1rem;
+    }
+
+h1{
+    font-size: var(--Display-medium);
+}
+h2{
+    font-size: var(--Headline2-medium);
+}
+h3{
+    font-size: var(--Headline3-medium);
+}
+p {
+    font-size: var(--Body-medium);
+	}
+ }
+
+ /*Mobil*/
+@media (max-width: 431px){
+    .section_1{
+        padding: 4rem;
+    }
+    .section_2{
+        padding: 4rem;
+    }
+    .grid_1-1{
+		grid-template-columns: 1fr;
+		width: 20rem;
+		gap: 16rem;
+		max-width: 431px;
+    }
+
+    h1{
+       max-width: 431px;
+
+    }
+    .herotext {
+        width: 20rem;
+
+    }
+    .heroh2 {
+        width: 20rem;
+    
+    }
+
+    .h2 {
+        max-width: 18rem;
+    }
+
+    .sektion {
+        width: 300px; 
+       
+    }
+
+    .del1{
+   
+        gap: 4rem;
+        max-width: 300px;
+  
+    }
+
+    .del2{
+        max-width: 300px;
+        height: 400px;
+
+   
+    }
+
+    h1{
+    font-size: var(--Display-small);
+}
+h2{
+    font-size: var(--Headline2-small);
+}
+h3{
+    font-size: var(--Headline3-small);
+}
+p {
+    font-size: var(--Body-small);
+	} 
+
+
+ul {
+    font-size: var(--Body-small);
+	} 
 }
 </style>

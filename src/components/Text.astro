@@ -1,0 +1,122 @@
+<section class="wrapper">
+    <div class="sentence">
+          <span>Plastik er</span>
+          <div class="words rotate">
+              <span>fedt</span>
+              <span>forurenende</span>
+              <span>brugbart</span>
+              <span>holdbart</span>
+              <span>genbrugeligt</span>
+              <span>engangskultur</span>
+          </div>
+      <br/>
+      
+    </div>
+  </section>
+
+  <style>
+
+    span{
+        font-family: "NotoSans", sans-serif;
+  font-size: var(--Display-large);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+  color: var(--color-text-display);
+    }
+    .wrapper{
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	margin-left: 0%;
+    max-width: 85rem;
+        margin-inline: auto;
+        
+	
+}
+.sentence{
+	margin: 0 auto;
+	text-align: left;
+	
+}
+
+.words{
+	display: inline;
+	text-indent: 25px;
+}
+.words span{
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	width: 100%;
+  font-weight: 700;
+  height: 20rem;
+}
+.rotate span{
+	-webkit-animation:  rotateWord 18s linear infinite;
+	        animation:  rotateWord 18s linear infinite;
+}
+.words span:nth-child(1) {
+	
+}
+.words span:nth-child(2) { 
+	
+	-webkit-animation-delay: 3s; 
+	        animation-delay: 3s; 
+}
+.words span:nth-child(3) { 
+	
+	-webkit-animation-delay: 6s; 
+	        animation-delay: 6s; 
+}
+.words span:nth-child(4) {
+	
+	-webkit-animation-delay: 9s; 
+	        animation-delay: 9s; 
+}
+.words span:nth-child(5) {
+	
+	-webkit-animation-delay: 12s; 
+	        animation-delay: 12s; 
+}
+.words span:nth-child(6) {
+	
+	-webkit-animation-delay: 15s; 
+	        animation-delay: 15s; 
+}
+
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+	5% { opacity: 1; -webkit-transform: translateY(0px);}
+    25% { opacity: 1; -webkit-transform: translateY(0px); }
+	27% { opacity: 0; -webkit-transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -ms-transform: translateY(-30px); }
+	5% { opacity: 1; -ms-transform: translateY(0px);}
+    17% { opacity: 1; -ms-transform: translateY(0px); }
+	20% { opacity: 0; -ms-transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+	5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+	20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@media screen and (max-width: 420px) {
+    .words{
+	display: block;
+	text-indent: 0px;
+}
+}
+  </style>
