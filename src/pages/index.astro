@@ -7,8 +7,12 @@ import Button from "../components/Button.astro"
 
 <MainLayout title="Plastic-change">
 	<section class="herosection">
+		<div class="herounit">
+		<div class="hero_text">
 		<Text/>
-		<h2>Vi vil have din hjælp, men du behøver ikke at gøre noget fysisk arbejde </h2>
+		<h2>Bliv en plastic changer og støt os i kampen mod plastikforurening </h2>
+	</div>
+	</div>
 		<Formular/>
 	</section>
 
@@ -50,13 +54,28 @@ import Button from "../components/Button.astro"
 	.herosection {
 		height: 52.625rem;
 		background: var(--color-background-hero);
+		
 	}
 
 	.herosection h2 {
 		color: var(--color-text-h3-secondary);
-		width: 30.9375rem;
-		height: 3.3125rem;
+		width: 35rem;
+		max-width: 85rem;
+		margin-top: 2rem;
+  
 	}
+.hero_text{
+	width: 75rem;
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-top: 8rem;
+}
+
+.herounit {
+	max-width: 85rem;
+}
 
 	.sus {
 		display: grid;
@@ -65,7 +84,6 @@ import Button from "../components/Button.astro"
 		justify-content: center;
 		align-items: center;
 		gap: 8rem;
-
 		margin-inline: auto;
 		max-width: 85rem;
 	}
