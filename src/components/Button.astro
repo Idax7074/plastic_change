@@ -85,11 +85,25 @@ const {variant, link} = Astro.props
         font-size: var(--Label-large);
     }
 
+    @media screen and (max-width: 1025px){ 
+        .primary a{
+            font-size: var(--Label-medium)
+        }
+
+        .primary {
+            padding-inline: 2.1875rem;
+        }
+    }
+
     @media screen and (max-width: 431px){
         .primary a{
             font-size: var(--Label-small)
         }
+
+        .primary {
+            padding-inline: 1.875rem;
+        }
     }
-    }
+
     
 </style>

@@ -1,10 +1,5 @@
----
-const {size} = Astro.props
----
-
-
 <div class="logo">
-    <a href="/" class={size}> Plastic change</a>
+    <a href="/"> plastic change</a>
   </div>
   
 <style>
@@ -17,17 +12,23 @@ const {size} = Astro.props
     padding: 20px;
     text-decoration: none;
     font-family: "NotoSans", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 100%;
-  }
-
-  .large {
     font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
   }
 
-  .small {
-    font-size: 0.8rem;
-    width: 130px;
+  @media screen and (max-width: 1025px) {
+    .logo a {
+      font-size: 1rem;
+      width: 155px;
+    }
+  }
+
+  @media screen and (max-width: 431px) {
+    .logo a {
+      font-size: 0.8rem;
+      width: 130px;
+    }
   }
   </style>

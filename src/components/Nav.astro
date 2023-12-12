@@ -4,12 +4,7 @@ import Logo from "../components/Logo.astro"
 ---
 
 <header class="banner">
-    <div class="logolarge"> 
-     <Logo size="large"/>
- </div>
- <div class="logosmall"> 
-    <Logo size="small"/>
-    </div>
+     <Logo/>
   <nav class="menu">
     <button class="toggle-btn" aria-label="Burgermenu">
       <span class="bar1"></span>
@@ -28,11 +23,7 @@ import Logo from "../components/Logo.astro"
     </ul>
   </nav>
   <ul class="knapper">
-    <Button variant="primary" size="large" link="#">Støt her</Button>
-  <li><i class="fas fa-shopping-basket"></i></li>
-</ul>
-<ul class="lilleknap">
-    <Button variant="primary" size="small" link="#">Støt her</Button>
+    <Button variant="primary" link="#">Støt her</Button>
 </ul>
 </header>
 
@@ -85,10 +76,6 @@ import Logo from "../components/Logo.astro"
 
   ul {
         list-style: none;
-    }
-
-    .lilleknap {
-        display:none
     }
 
   @media (min-width: 1025px) {
@@ -303,28 +290,20 @@ import Logo from "../components/Logo.astro"
   }
 
   @media (max-width: 431px) {
-
-    .logolarge{
-        display: none;
-    }
-
-    .logosmall{
-        display: flex;
-    }
-
     .banner {
         padding: 0.5rem
     }
-    
-    .knapper {
-        display: none;
-    }
 
-    .lilleknap {
+    .knapper {
         display:flex;
         justify-content:flex-start;
         width: 200px;
     }
 
+    .menu.shown ul{
+      grid-column: 1;
+      grid-row: 1;
+    }
+    
   }
 </style>
