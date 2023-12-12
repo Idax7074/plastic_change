@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layout/MainLayout.astro"
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout tittle="Konsekvenserne-af-forbruget">
@@ -64,6 +65,9 @@ import MainLayout from "../layout/MainLayout.astro"
         Eksempler på fødevarer vi spiser til hverdag, som der er fundet plastik i er bl.a. sild, honning, øl, vin, muslinger, havsalt og vand på flaske.
         Det er estimeret, at der globalt spildes 951.00 tons mikroplastik ud i miljøet om året.
     </p>
+    <div class="knap">
+    <Button variant="primary" link="/genbrug">Hvad er løsningen?</Button>
+</div>
 </div>
 </article>
 </div>
@@ -117,7 +121,7 @@ import MainLayout from "../layout/MainLayout.astro"
     }
 
     .h2_section{
-     padding-bottom: 40px;
+     padding-bottom: 3rem;
     }
 
     .h2 {
@@ -134,6 +138,10 @@ import MainLayout from "../layout/MainLayout.astro"
 
     span{
         color: var(  --color-text-h3);
+    }
+
+    .knap{
+        padding-top: 3rem;
     }
 
 /*Tabelt*/
