@@ -13,20 +13,22 @@ import MainLayout from "../layout/MainLayout.astro"
 </section>
 
 <section class="section_1">
-     <div class="sektion">   
+     <div class="section">   
     <div class="h2">
     <h2 class="h2_section">Det ender i havet</h2>
     </div>
-    <article class="grid_1-1">
+    <article class="grid_1-1 grid1">
         <div class="del1">
     <p>
         Plastik er en stor del af vores hverdag på både godt og ondt. Vi omgåes det hele tiden i form af plastikemballage om madvarer, tandpastatuben, flasker, vores syntetiske tøj, møbler mm. 
         Udover den plastik vi kender findes der også mikroplastik, som er plastikpartikler under 5 mm. Disse partikler findes i blandt andet skønheds- og plejeprodukter, maling og mad mm.
     </p>
+    <br> <br>
     <p>
         I 2015 blev det konkluderet, at der hvert år udledes omkring 8 mio. tons affald i verdenshavene. 
         Dette svarer til en lastbil fuld af plastik bliver tømt ud i havene hvert eneste minut. 
     </p>
+    <br> <br>
         <p>
             Alle disse tons affald har fatale konsekvenser, ikke mindst for vores dyreliv i havene. Der findes både internationale og danske studier der viser, at der findes plastikpartikler i vores muslinger, drikkevand, salt, honning, øl og i rigtig mange dyremaver.
             I havfuglearter er det mere end 90% der har plastik i maven netop fordi dyrene forveksler alt det plastik, der ligger i havene, med mad. 
@@ -46,8 +48,8 @@ import MainLayout from "../layout/MainLayout.astro"
 </section>
 
 <section class="section_2">
-    <div class="sektion">
-    <article class="grid_1-1">
+    <div class="section">
+    <article class="grid_1-1 grid2">
         <div class="del1">
     <img src="/img/plastikfisk.svg" alt="En plastik fisk på en tallerken">
 </div>
@@ -55,7 +57,7 @@ import MainLayout from "../layout/MainLayout.astro"
     <h2 class="h2_section">Det ender i os</h2>
     <p>
         Rigtig meget plastik ender i havet. Her bliver det til mikroplastik, som er små plastikpartikler på under 5mm.
-        <br>
+        <br> <br>
         Mikroplastik er småt og kan nemt forveksles med mad for fisk og andre havdyr. 
         Det er en af de måder, plastik ender i vores fødevare. 
         Når fisk spiser plastikstykker, sker der nogle processer i fiskens mave, som gør, at nogle af de kemikalier der findes i eller på overfladen af plastik, ”overføres” til fiskens væv. Når vi spiser fisken, kan disse kemikalier derfor blive overført videre til os. 
@@ -67,7 +69,7 @@ import MainLayout from "../layout/MainLayout.astro"
 </div>
 </section>
 
-<section>
+<section class="havet">
     <img src="/img/vandskrald.svg" alt="Infografik om hvor meget plastik der er i vandet">
 </section>
 </MainLayout>
@@ -80,8 +82,6 @@ import MainLayout from "../layout/MainLayout.astro"
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-       
-
     }
 
     .herotext {
@@ -93,26 +93,30 @@ import MainLayout from "../layout/MainLayout.astro"
         color: var( --color-text-h3-secondary);
     }
 
-    .heroh2 {
-        width: 61.0625rem;
-        display: flex;
-        justify-content: flex-start;
-    }
-
     h1{
         max-width: 1085px;
         margin-inline: auto;
     }
 
-    .section_1{
-        padding: 6rem;
+    section {
+        padding-inline: 2rem;
+        padding-bottom: 9.375rem;
+    }    
+    
+    .section {
+        width: 81.8125rem; 
+        margin-inline: auto;
+    }
+
+    .section_1 {
+        padding-top: 9.375rem;
+    }
+    .havet {
+        padding-inline: 0rem;
+        padding-bottom: 0rem;
     }
 
     .h2_section{
-     display: flex;
-     max-width: 580px;
-     padding: 10px 10px 10px 0px;
-     align-items: flex-start;
      padding-bottom: 40px;
     }
 
@@ -122,179 +126,54 @@ import MainLayout from "../layout/MainLayout.astro"
         justify-content: flex-start;
     }
 
-    .sektion {
-        width: 81.8125rem; 
-        margin-inline: auto;
-    }
-
     .grid_1-1{
         display: grid;
 		grid-template-columns: 1fr 1fr;
-        display: flex;
-        max-width: 85rem;
-        justify-content: center;
-        align-items: flex-start;
         gap: 5rem;
-    
-       
-    }
-
-    .del1{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2.4rem;
-        width: 550px;
-        height: 192px;
-    }
-
-    .del2{
-        max-width: 600px;
-        height: 456px;
-        padding-left: 3.5rem;
     }
 
     span{
         color: var(  --color-text-h3);
     }
 
-    ul{
-        padding-left: 2rem;
-    }
-
-.section_2{
-    padding: 6rem;
-    
-}
-
 /*Tabelt*/
 @media (max-width: 1025px){
 
-    .grid_1-1{
-        display: grid;
-		grid-template-columns: 1fr 1fr;
-        max-width: 20rem;
-		gap: 2rem;
-		max-width: 1025px;
-    }
-
-    .del1{
-     
-        gap: 2.4rem;
-        width: 25rem;
-        height: 192px;
-    }
-
-    .del2{
-        width: 25rem;
-        height: 456px;
-        padding-left: 0;
-    }
-
-    .section_1{
-        padding: 4rem;
-    }
-    .section_2{
-    padding: 4rem;
-    
-}
-    .sektion {
-        width: 865px;
-    }
-
     h1{
-        max-width: 1025px;
-
+        font-size: var(--Display-medium);
     }
-    .herotext {
-        width: 50rem;
-
+    h2{
+        font-size: var(--Headline2-medium);
     }
-    .heroh2 {
-        width: 50rem;
+    p {
+        font-size: var(--Body-medium);
+	}
+
+    .section{
+        width: 52.625rem;
+    }
+
+    section {
+        padding-inline: 2rem;
+        padding-bottom: 6rem;
+    }
+
+    .section_1 {
+        padding-top: 6rem;
+    }    
     
-    }
-
     .h2 {
-        max-width: 25rem;
-        display: flex;
-        justify-content: flex-start;
+        width: auto;
     }
 
-    .del2 img{
-		max-width: 20rem;
-		margin-inline: auto;
-	}
-    .del1 img{
-		max-width: 20rem;
-		margin-inline: auto;
-	}
-    h1{
-    font-size: var(--Display-medium);
+    .herotext {
+        width: 52.625rem;
+    } 
 }
-h2{
-    font-size: var(--Headline2-medium);
-}
-p {
-    font-size: var(--Body-medium);
-	}
-}
+
 
  /*Mobil*/
  @media (max-width: 431px){
-    .section_1{
-        padding: 4rem;
-    }
-    .section_2{
-        padding: 4rem;
-    }
-    .grid_1-1{
-		grid-template-columns: 1fr;
-		width: 20rem;
-		gap: 16rem;
-		max-width: 431px;
-    }
-
-    h1{
-       max-width: 431px;
-
-    }
-    .herotext {
-        width: 20rem;
-
-    }
-    .heroh2 {
-        width: 20rem;
-    
-    }
-
-    .h2 {
-        max-width: 18rem;
-    }
-
-    .sektion {
-        width: 300px; 
-       
-    }
-
-    .del1{
-   
-        gap: 4rem;
-        max-width: 300px;
-  
-    }
-
-    .del2{
-        max-width: 300px;
-        height: 400px;
-
-   
-    }
-
-    .reverse {
-        grid-column: 1;
-        grid-row: 1;
-    }
 
     h1{
     font-size: var(--Display-small);
@@ -308,6 +187,59 @@ h3{
 p {
     font-size: var(--Body-small);
 	} 
+
+    .section{
+        width: 20rem;
+    }
+
+    section {
+        padding-inline: 1rem;
+        padding-bottom: 4rem;
+    }
+
+    .section_1 {
+        padding-top: 4rem;
+    }
+
+    .section_3 {
+        padding-block: 2rem;
+    }
+
+    .h2 {
+        width: auto;
+    }
+
+    .del1 {
+        height: 450px;
+    }
+
+    .herotext {
+        width: 20rem;
+    }
+
+    .grid_1-1 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .grid1 {
+        grid-template-rows: 380px 395px;
+    }
+
+    .grid2 {
+        grid-template-rows: 300px 280px;
+    }
+
+    .reverse {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .del1 img {
+        max-width: 270px;
+        margin-inline: auto;
+    }
+
 } 
 
 </style>

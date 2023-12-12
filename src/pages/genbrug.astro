@@ -13,7 +13,7 @@ import MainLayout from "../layout/MainLayout.astro";
 </section>
 
 <section class="section_1">
-    <div class="sektion">
+    <div class="section">
     <div class="h2">
     <h2 class="h2_section">Ansvaret ligger hos politikerne</h2>
     </div>
@@ -32,7 +32,7 @@ import MainLayout from "../layout/MainLayout.astro";
 </section>
 
 <section>
-    <div class="sektion">
+    <div class="section">
         <div class="h2">
     <h2 class="h2-genbrug">Genanvendelse vs. genbrug</h2>
     </div>
@@ -41,7 +41,7 @@ import MainLayout from "../layout/MainLayout.astro";
 </section>
 
 <section class="section_2">
-    <div class="sektion">
+    <div class="section">
         <div class="h2">
     <h2 class="h2_section">Hvad kan genanvendelse? </h2>
     </div>
@@ -50,10 +50,12 @@ import MainLayout from "../layout/MainLayout.astro";
     <p>Genanvendelse forgår ved, at produkterne først nedbrydes eller findeles hvorefter der indvindes stoffer eller materialer fra de nedbrudte produkter. Materialerne kan derefter enten bruges ved fremstilling af samme type produkter som de oprindelige, eller til helt andre produkter.
         I modsætning til genbrug, hvor produktet ikke nedbrydes først, handler genanvendelse om at indvinde ressourcerne i affaldet.
     </p>
+    <br>
     <p>
         Når du genanvender tager du altså skridtet videre, her genanvender du materialerne til nye produkter i modsætning til genbrug hvor du genbruger de allerede eksisterende produkter du har.
         Ved genanvendelse smelter du altså plastikken om så du kan lave nye materialer.
     </p>
+    <br>
     <p>
         Og lige netop denne process er mere omfattende på CO2 fronten da plastikken skal smeltes om og igennem en længere process, derfor ville det bedste for klimaet være, at genbruge vores materialer vi allerede har, derved produceres der mindre og i sidste ende komme vi derved også til at udlede mindre CO2.
     
@@ -70,7 +72,7 @@ import MainLayout from "../layout/MainLayout.astro";
 </section>
 
 <section class="section_3">
-    <div class="sektion">
+    <div class="section">
     <article class="grid_1-1 grid3">
         <div class="del1 quote center">
             <div class="streg"></div>
@@ -86,6 +88,7 @@ import MainLayout from "../layout/MainLayout.astro";
             <br>
             <p>
                 Målet om at udfase engangsplastik og skabe bedre genbrugsløsninger er en del af alt, hvad vi laver. 
+                <br>
                 Genbrug er, at man bruger det samme produkt (til det samme formål) mere end én gang - evt. ved hjælp af vask eller anden form for rengøring. Så når vi taler om genbrugsløsninger, er det hvad vi som individer selv kan gøre, og hvordan man kan bygge et helt system op, der opfordrer til at genbruge. Hvordan vi kan blive bedre og smartere til at bruge jordens ressourcer, dels fordi det reducerer mængden af CO2-udledninger, der er forbundet med produktion og affaldsforbrænding. Vi skal have fokus på, hvordan man kan skabe et indgroet system, hvor ansvaret for genbrug ikke kun hviler på individet.
             </p>
         </div>
@@ -129,7 +132,7 @@ import MainLayout from "../layout/MainLayout.astro";
         justify-content: flex-start;
     }
 
-    .sektion {
+    .section {
         width: 81.8125rem; 
         margin-inline: auto;
     }
@@ -137,22 +140,7 @@ import MainLayout from "../layout/MainLayout.astro";
     .grid_1-1{
         display: grid;
 		grid-template-columns: 1fr 1fr;
-        max-width: 85rem;
-        gap: 8rem;
-    }
-
-    .del1{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2.4rem;
-        max-width: 600px;
-        height: 450px;
-    }
-
-    .del2{
-        max-width: 600px;
-        height: 456px;
+        gap: 5rem;
     }
 
     .quote {
@@ -199,16 +187,12 @@ import MainLayout from "../layout/MainLayout.astro";
     p {
     font-size: var(--Body-medium);
 	}
-    .sektion{
+    .section{
         width: 52.625rem;
     }
 
     .h2 {
         width: auto;
-    }
-
-    .del1 {
-        height: 450px;
     }
 
     .herotext {
@@ -243,16 +227,12 @@ import MainLayout from "../layout/MainLayout.astro";
     p {
     font-size: var(--Body-small);
 	}
-    .sektion{
+    .section{
         width: 20rem;
     }
 
     .h2 {
         width: auto;
-    }
-
-    .del1 {
-        height: 450px;
     }
 
     .herotext {
@@ -274,14 +254,6 @@ import MainLayout from "../layout/MainLayout.astro";
 
     .grid3 {
         grid-template-rows: 450px 80px;
-    }
-
-    .del2 {
-        height: auto;
-    }
-
-    .del1 {
-        height: auto;
     }
 
     section {
