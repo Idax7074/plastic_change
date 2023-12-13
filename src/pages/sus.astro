@@ -37,7 +37,7 @@ import Button from "../components/Button.astro"
 </section>
 
 <section class="section2">
-    <div class=" section grid_1-1">
+    <div class=" section grid_1-1 section_2">
         <article class="text">
             <h2>Konsekvenserne</h2>
             <h4> 
@@ -64,14 +64,61 @@ import Button from "../components/Button.astro"
 </section>
 </Mainlayout>
 
-<style>
+<script>
+    import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	
+	
+	gsap.registerPlugin(ScrollTrigger);
+	
+	gsap.from(".section1", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".hero",
+		start: "170 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
 
+	gsap.from(".infografik", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".section1",
+		start: "0 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
+
+    gsap.from(".section_2", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".infografik",
+		start: "170 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	});
+</script>
+
+<style>
 span {
     font-size: 8.915rem;
 }
 
 .hero {
     background-color: var(--color-background-hero);
+    background-image: url("/img/singleusesucks.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
     height: 52.625rem;  
     display: flex;
     justify-content: center;

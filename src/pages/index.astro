@@ -35,7 +35,7 @@ import Button from "../components/Button.astro"
 	</section>
 
 	<section class="section2">
-		<div class="section">
+		<div class="section section_2">
 		<article class="grid_1-1">
 		<div class="text reverse">
 		<h2>Hvad er løsningen</h2>
@@ -56,11 +56,45 @@ import Button from "../components/Button.astro"
 	</section>
 </Mainlayout>
 
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	
+	
+	gsap.registerPlugin(ScrollTrigger);
+	
+	gsap.from(".section_1", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".hero_text",
+		start: "100 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
+
+	gsap.from(".section_2", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".section_1",
+		start: "100 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
+</script>
 
 <style>
 	.herosection {
 		height: 52.625rem;
 		background: var(--color-background-hero);
+		background-image: url("/img/hero.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
 		padding-top: 1rem;
 	}
 

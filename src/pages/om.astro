@@ -46,7 +46,7 @@ import Button from "../components/Button.astro";
 </section>
 
 <section class="section_2">
-    <div class="section">
+    <div class="section section2">
         <div class="h2">
 <h2 class="h2_section">Sådan opstod Plastic Change</h2>
 </div>
@@ -68,6 +68,38 @@ import Button from "../components/Button.astro";
 </div>
  </section>
 </Mainlayout>
+
+<script>
+    import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	
+	
+	gsap.registerPlugin(ScrollTrigger);
+	
+	gsap.from(".section_1", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".hero",
+		start: "0 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
+
+	gsap.from(".section2", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".section_1",
+		start: "100 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
+</script>
 
 <style>
     .hero{

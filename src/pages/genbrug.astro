@@ -31,7 +31,7 @@ import Mainlayout from "../layout/Mainlayout.astro";
     </div>
 </section>
 
-<section>
+<section class="infografik">
     <div class="section">
         <div class="h2">
     <h2 class="h2-genbrug">Genanvendelse vs. genbrug</h2>
@@ -72,7 +72,7 @@ import Mainlayout from "../layout/Mainlayout.astro";
 </section>
 
 <section class="section_3">
-    <div class="section">
+    <div class="section section3">
     <article class="grid_1-1 grid3">
         <div class="del1 quote center">
             <div class="streg"></div>
@@ -96,6 +96,62 @@ import Mainlayout from "../layout/Mainlayout.astro";
 </div>
 </section>
 </Mainlayout>
+
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	
+	
+	gsap.registerPlugin(ScrollTrigger);
+	
+	gsap.from(".section_1", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".hero_section",
+		start: "0 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
+
+	gsap.from(".infografik", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".section_1",
+		start: "-200 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
+
+    gsap.from(".section_2", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".infografik",
+		start: "100 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	});
+
+    gsap.from(".section3", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".section_2",
+		start: "-100 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	});
+</script>
 
 <style>
     .hero-section{

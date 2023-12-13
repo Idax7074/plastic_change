@@ -78,6 +78,38 @@ import Button from "../components/Button.astro";
 </section>
 </Mainlayout>
 
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	
+	
+	gsap.registerPlugin(ScrollTrigger);
+	
+	gsap.from(".section_1", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".hero_section",
+		start: "0 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
+
+	gsap.from(".section_2", {
+	scrollTrigger: {
+		scrub: true,
+		trigger: ".section_1",
+		start: "170 start",
+		end: "1000 center",
+		// markers: true,
+	},
+	opacity:0,
+	duration:0.5,
+	}); 
+</script>
+
 <style>
     .hero-section{
         background: var(--color-background-hero, #FF1054);
@@ -235,7 +267,7 @@ p {
     }
 
     .grid2 {
-        grid-template-rows: 300px 280px;
+        grid-template-rows: 400px 280px;
     }
 
     .reverse {
