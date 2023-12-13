@@ -38,7 +38,6 @@ const {variant, link} = Astro.props
     }
 
     .primary {
-        color: var(--color-button-text);
         background: var(--color-button-background);
         border: 2px solid var(--color-button-stroke);
         padding: var(--spacing-vertical-button-lg) var(--spacing-horizontal-button-sm);
@@ -66,6 +65,10 @@ const {variant, link} = Astro.props
         padding: var(--spacing-vertical-button-lg) var(--spacing-horizontal-button-lg);
     }
 
+    .secondary a {
+        color: var(--color-button-text);
+    }
+
     .secondary:hover {
         color: var(--color-button-text-hover);
         background: var(--color-button-background-hover);
@@ -73,16 +76,8 @@ const {variant, link} = Astro.props
         padding: var(--spacing-vertical-button-lg) var(--spacing-horizontal-button-lg);
     }
 
-    .small {
-        font-size: var(--Label-small);
-    }
-
-    .medium {
-        font-size: var(--Label-medium);
-    }
-
-    .large {
-        font-size: var(--Label-large);
+    .secondary:hover a {
+        color: var(--color-button-text-hover);
     }
 
     @media screen and (max-width: 1025px){ 
@@ -97,6 +92,18 @@ const {variant, link} = Astro.props
         .primary:hover {
             padding-inline: 2.1875rem;
         }
+
+        .secondary a{
+            font-size: var(--Label-medium)
+        }
+
+        .secondary {
+            padding-inline: 6.25rem;
+        }
+
+        .secondary:hover {
+            padding-inline: 6.25rem;
+        }
     }
 
     @media screen and (max-width: 431px){
@@ -110,6 +117,18 @@ const {variant, link} = Astro.props
 
         .primary:hover {
             padding-inline: 1.875rem;
+        }
+
+        .secondary a{
+            font-size: var(--Label-small)
+        }
+
+        .secondary {
+            padding-inline: 4.6875rem;
+        }
+
+        .secondary:hover {
+            padding-inline: 4.6875rem;
         }
     }
 
