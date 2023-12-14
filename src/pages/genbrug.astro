@@ -1,5 +1,6 @@
 ---
 import Mainlayout from "../layout/Mainlayout.astro";
+import Button from "../components/Button.astro";
 
 ---
 <Mainlayout title="genbrug-over-genanvendelse">
@@ -37,6 +38,7 @@ import Mainlayout from "../layout/Mainlayout.astro";
     <h2 class="h2-genbrug">Genanvendelse vs. genbrug</h2>
     </div>
     <img src="/img/genanveldelsecirkel.svg" alt="genbrug vs genanvendelsescirkel">
+    <p>Når man genanvender skal man igennem 9 steps, hvorimod man kun skal igennem 2 steps, når man genbruger.</p>
     </div>
 </section>
 
@@ -91,6 +93,9 @@ import Mainlayout from "../layout/Mainlayout.astro";
                 <br>
                 Genbrug er, at man bruger det samme produkt (til det samme formål) mere end én gang - evt. ved hjælp af vask eller anden form for rengøring. Så når vi taler om genbrugsløsninger, er det hvad vi som individer selv kan gøre, og hvordan man kan bygge et helt system op, der opfordrer til at genbruge. Hvordan vi kan blive bedre og smartere til at bruge jordens ressourcer, dels fordi det reducerer mængden af CO2-udledninger, der er forbundet med produktion og affaldsforbrænding. Vi skal have fokus på, hvordan man kan skabe et indgroet system, hvor ansvaret for genbrug ikke kun hviler på individet.
             </p>
+            <div class="button">
+            <Button variant="primary" link="/index.astro">Vær med til at stoppe plastikforurening</Button>
+        </div>
         </div>
     </article>
 </div>
@@ -185,6 +190,14 @@ import Mainlayout from "../layout/Mainlayout.astro";
         width: 81.8125rem;
         display: flex;
         justify-content: flex-start;
+    }
+
+    .infografik p{
+        padding-top: 2rem;
+    }
+
+    .button{
+        padding-top: 2rem;
     }
 
     .section {
