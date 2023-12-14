@@ -175,7 +175,7 @@ import Button from "../components/Button.astro"
 
 @media screen and (max-width: 767px) {
 	.formular .formcomp{
-	flex-basis: 90%;
+	flex-basis: 50%;
 }
 }
 
@@ -223,9 +223,15 @@ import Button from "../components/Button.astro"
 	}
 	p {
     	font-size: var(--Body-small);
-	}
+	}	
+	
+	 section {
+        padding-inline: 2em;
+        padding-bottom: 4rem;
+    }
 	.herosection {
-		height:40rem;	
+		height:40rem;
+		padding-inline: 1rem;	
 	}
 	.hero_text{
 		margin-top: 4rem;
@@ -238,11 +244,6 @@ import Button from "../components/Button.astro"
 	.grid_1-1 {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-	section {
-        padding-inline: 1rem;
-        padding-bottom: 4rem;
     }
 
     .section_1 {

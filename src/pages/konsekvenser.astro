@@ -121,7 +121,7 @@ import Button from "../components/Button.astro";
     }
 
     .herotext {
-        width: 61.0625rem;
+        width: auto;
         margin-inline: auto;
     }
 
@@ -135,12 +135,12 @@ import Button from "../components/Button.astro";
     }
 
     section {
-        padding-inline: 2rem;
+        padding-inline: 6rem;
         padding-bottom: 9.375rem;
     }    
     
     .section {
-        width: 81.8125rem; 
+        width: 100%; 
         margin-inline: auto;
     }
 
@@ -157,7 +157,7 @@ import Button from "../components/Button.astro";
     }
 
     .h2 {
-        width: 81.8125rem;
+        width: 100%;
         display: flex;
         justify-content: flex-start;
     }
@@ -177,7 +177,7 @@ import Button from "../components/Button.astro";
     }
 
 /*Tabelt*/
-@media (max-width: 1025px){
+@media screen and (min-width: 768px and max-width: 1023px){
 
     h1{
         font-size: var(--Display-medium);
@@ -190,7 +190,7 @@ import Button from "../components/Button.astro";
 	}
 
     .section{
-        width: 52.625rem;
+        width: auto;
     }
 
     section {
@@ -207,13 +207,13 @@ import Button from "../components/Button.astro";
     }
 
     .herotext {
-        width: 52.625rem;
+        width: auto;
     } 
 }
 
 
  /*Mobil*/
- @media (max-width: 431px){
+ @media screen and (max-width: 767px){
 
     h1{
     font-size: var(--Display-small);
@@ -229,11 +229,11 @@ p {
 	} 
 
     .section{
-        width: 20rem;
+        width: 100%;
     }
 
     section {
-        padding-inline: 1rem;
+        padding-inline: 2rem;
         padding-bottom: 4rem;
     }
 
@@ -254,7 +254,7 @@ p {
     }
 
     .herotext {
-        width: 20rem;
+        width: 100%;
     }
 
     .grid_1-1 {

@@ -88,7 +88,7 @@ import Button from "../components/Button.astro";
 	duration:0.5,
 	}); 
 
-	gsap.from(".section2", {
+	gsap.from(".section_2", {
 	scrollTrigger: {
 		scrub: true,
 		trigger: ".section_1",
@@ -113,13 +113,13 @@ import Button from "../components/Button.astro";
 
 
     .herotext {
-        width: 61.625rem;
+        width: auto;
         margin-inline: auto;
     }
 
 
     .heroh2 {
-        width: 61.625rem;
+        width: auto;
         display: flex;
         justify-content: flex-start;
     }
@@ -133,13 +133,13 @@ import Button from "../components/Button.astro";
     }
 
     .h2 {
-        width: 81.8125rem;
+        width: auto;
         display: flex;
         justify-content: flex-start;
     }
 
     .section {
-        width: 81.8125rem; 
+        width: 100%; 
         margin-inline: auto;
     }
 
@@ -147,7 +147,7 @@ import Button from "../components/Button.astro";
         padding-top: 9.375rem;
     }
     section {
-        padding-inline: 2rem;
+        padding-inline: 6rem;
         padding-bottom: 9.375rem;
     }
     .section_2{
@@ -188,7 +188,7 @@ import Button from "../components/Button.astro";
 }
 
  /*Tablet*/
- @media (max-width: 1025px){
+ @media screen and (min-width: 768px max-width: 1023px){
 
     h1{
     font-size: var(--Display-medium);
@@ -203,15 +203,9 @@ p {
     font-size: var(--Body-medium);
 	}
 
-    .section{
-        width: 52.625rem;
-    }
  
     h2 {
         width: auto;
-    }
-    .herotext {
-        width: 20rem;
     }
 
     .h2 {
@@ -236,7 +230,7 @@ p {
  }
 
  /*Mobil*/
-@media (max-width: 431px){
+@media screen and (max-width: 767px){
 
     h1{
     font-size: var(--Display-small);
@@ -251,20 +245,17 @@ p {
     font-size: var(--Body-small);
 }
     section {
-        padding-inline: 1rem;
+        padding-inline: 2rem;
         padding-bottom: 4rem;
     }
 
-    .section {
-        width: 20rem;
-    }
 
     .section_1 {
         padding-top: 4rem;
     }
 
     .section_2{
-        padding: 4rem;
+        padding-block: 4rem;
     }
 
     .grid_1-1 {
