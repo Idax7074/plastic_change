@@ -30,7 +30,7 @@ import Button from "../components/Button.astro"
     <div class="section">
     <h2>Hvad bliver plastik brugt til?</h2>
     <div class="infografik_billede">
-    <img src="img/diagram.svg" alt="Infografik om hvad plastikken går til">
+    <img src="/img/diagram.svg" alt="Infografik om hvad plastikken går til">
     <p>Knap 40% af den plastik, der produceres, er plastik til fødevareemballage. En stor andel heraf er engangsplastik.</p>
 </div>
 </div>
@@ -116,6 +116,7 @@ span {
 .hero {
     background-color: var(--color-background-hero);
     background-image: url("/img/singleusesucks.svg");
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
@@ -135,7 +136,7 @@ h2 {
 }
 
 .section {
-    width: 81.8125rem; 
+    width: 100%; 
     margin-inline: auto;
 }
 
@@ -143,7 +144,7 @@ h2 {
     padding-top: 9.375rem;
 }
 section {
-    padding-inline: 2rem;
+    padding-inline: 6rem;
     padding-bottom: 9.375rem;
 }
 .what img{
@@ -179,7 +180,7 @@ h4{
 }
 
     /*Tablet*/
-@media (max-width: 1025px){
+@media screen and (min-width: 768px and max-width: 1023px){
     h2{
         font-size: var(--Headline2-medium);
     }
@@ -216,7 +217,7 @@ h4{
 }
 
 /*Mobil*/
-@media (max-width: 431px){
+@media screen and (max-width: 767px){
     h2{
         font-size: var(--Headline2-small);
     }
@@ -258,10 +259,6 @@ h4{
         padding-block: 2rem;
     }
 
-    .section{
-        width: 20rem;
-        margin-inline: ;
-    }
 
     .infografik {
         width: 20rem;

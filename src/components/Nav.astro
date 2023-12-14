@@ -30,7 +30,9 @@ import Logo2 from "./Logo2.astro";
 <script src="../script/burger.js"></script>
 
 <style>
-  header {
+
+  @media screen and (min-width: 768px) {
+    header {
     width: 100%;
     background: var(--color-background-nav);
     padding: 20px;
@@ -77,8 +79,6 @@ import Logo2 from "./Logo2.astro";
   ul {
         list-style: none;
     }
-
-  @media (min-width: 1025px) {
 
     #submenu {
       left: 10px;
@@ -179,8 +179,8 @@ import Logo2 from "./Logo2.astro";
       display: none;
     }
   }
+  @media (max-width: 767px) {
 
-  @media (max-width: 1024px) {
     .shop {
       display: none;
     }
@@ -195,12 +195,12 @@ import Logo2 from "./Logo2.astro";
     }
     .banner {
       background-color: var(--color-background-nav);
-      padding: 2rem;
+      padding: 0.5rem;
 
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       justify-items: center;
-      gap: 20px 40px;
+      gap: 10px 0px;
     }
 
     .logo {
@@ -216,11 +216,9 @@ import Logo2 from "./Logo2.astro";
     .knapper {
         grid-column: 3;
         grid-row: 1;
-    }
-
-    .knapper {
         display: flex;
         justify-content: flex-end;
+        width: 125px;
     }
 
     #submenu {
@@ -238,6 +236,8 @@ import Logo2 from "./Logo2.astro";
 
     .toggle-btn {
       display: block;
+      grid-column: 1;
+      grid-row: 1;
     }
 
     .toggle-btn span {
@@ -287,25 +287,5 @@ import Logo2 from "./Logo2.astro";
     .change .bar3 {
       transform: translate(0, -11px) rotate(45deg);
     }
-  }
-
-  @media (max-width: 431px) {
-    .banner {
-        padding: 0.5rem
-    }
-
-    .knapper {
-        width: 125px;
-    }
-
-    .toggle-btn {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .banner {
-      gap: 10px 0px;
-    }
-    
   }
 </style>

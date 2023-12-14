@@ -13,7 +13,9 @@ import Button from "../components/Button.astro"
 		<h2>Bliv en plastic changer og støt os i kampen mod plastikforurening </h2>
 	</div>
 	</div>
-		<Formular1/>
+	<div class="formular">
+		<div class="formcomp"><Formular1/></div>
+		</div>
 	</section>
 
 	<section class="section_1">
@@ -89,19 +91,16 @@ import Button from "../components/Button.astro"
 </script>
 
 <style>
-	.herosection {
+		.herosection {
 		height: 52.625rem;
 		background: var(--color-background-hero);
-		background-image: url("/img/hero.svg");
-		background-repeat: no-repeat;
-		background-size: cover;
 		padding-top: 1rem;
+		position: relative;
 	}
 
 	.herosection h2 {
 		color: var(--color-text-h3-secondary);
 		width: 35rem;
-		max-width: 85rem;
 		margin-top: 2rem;
   
 	}
@@ -110,18 +109,13 @@ import Button from "../components/Button.astro"
 		grid-row: 1;
 	}
 	.hero_text{
-	width: 75rem;
+	width: auto;
 	margin-inline: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	margin-top: 8rem;
-}
-
-	.herounit {
-	max-width: 85rem;
 	}
-
 	h2 {
 		padding-bottom: 40px;
 	}
@@ -133,7 +127,7 @@ import Button from "../components/Button.astro"
     }
 
 	.section {
-        width: 81.8125rem; 
+		width: 100%;
         margin-inline: auto;
     }
 
@@ -141,7 +135,7 @@ import Button from "../components/Button.astro"
         padding-top: 9.375rem;
     }
     section {
-        padding-inline: 2rem;
+        padding-inline: 6rem;
         padding-bottom: 9.375rem;
     }
 
@@ -155,65 +149,82 @@ import Button from "../components/Button.astro"
 		margin-inline: auto;
 	}
 
-	/*Tablet*/
-	@media (max-width: 1025px){
-		h1{
-    font-size: var(--Display-medium);
-}
-h2{
-    font-size: var(--Headline2-medium);
-}
-p {
-    font-size: var(--Body-medium);
+@media screen and (min-width: 768px){
+		.herosection {
+		background-image: url("/img/hero.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		}
 	}
-		.hero_text{
-	width: 55rem;
-	margin-top: 8rem;
+
+/* formular halløj */
+.formular{
+	display: flex;
+	flex-direction: row ;
+	justify-content: flex-end;
+
+}
+.formular .formcomp{
+	flex-basis: 33%;
 }
 
-.section{
-        width: 52.625rem;
-    }
+@media screen and (max-width: 767px) {
+	.formular .formcomp{
+	flex-basis: 90%;
+}
+}
+
+	/*Tablet*/
+@media screen and (min-width: 768px and max-width: 1023px){
+	h1{
+    	font-size: var(--Display-medium);
+	}
+	h2{
+    	font-size: var(--Headline2-medium);
+	}
+	p {
+    	font-size: var(--Body-medium);
+	}
+	.hero_text{
+		margin-top: 8rem;
+	}
 	section {
         padding-inline: 2rem;
         padding-bottom: 6rem;
     }
-
-
     .section_1 {
         padding-top: 6rem;
     }
-
 	.section2 {
         padding-block: 6rem;
     }
-
 	img{
 		max-width: 20rem;
 	}
 
-	}
+}
 
 	/*Mobil*/
-@media (max-width: 431px){
+@media screen and (max-width: 767px){
 
-	h1{
-    font-size: var(--Display-small);
-}
-h2{
-    font-size: var(--Headline2-small);
-}
-p {
-    font-size: var(--Body-small);
+	.herosection {
+		background-color: var(--color-background-hero);
 	}
-
+	h1{
+    	font-size: var(--Display-small);
+	}
+	h2{
+    	font-size: var(--Headline2-small);
+	}
+	p {
+    	font-size: var(--Body-small);
+	}
 	.herosection {
 		height:40rem;	
 	}
 	.hero_text{
-	width: 25rem;
-	margin-top: 4rem;
-}
+		margin-top: 4rem;
+	}
 	.herosection h2 {
 		width: 25rem;
 		max-width: 25rem;  
@@ -222,10 +233,6 @@ p {
 	.grid_1-1 {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-	.section{
-        width: 20rem;
     }
 
 	section {
