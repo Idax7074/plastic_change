@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 100 100"><rect width="100" height="100" rx="0" fill="#ff1054"></rect><path fill="#fff" d="M39.53 24.38L39.53 47.69L45.00 47.69Q52.69 47.69 56.50 44.66Q60.31 41.62 60.31 35.82L60.31 35.82Q60.31 29.97 57.12 27.17Q53.92 24.38 47.10 24.38L47.10 24.38L39.53 24.38ZM77.12 35.23L77.12 35.23Q77.12 47.91 69.20 54.62Q61.28 61.33 46.67 61.33L46.67 61.33L39.53 61.33L39.53 89.26L22.88 89.26L22.88 10.74L47.96 10.74Q62.25 10.74 69.69 16.89Q77.12 23.04 77.12 35.23Z"></path></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 190.7 190.4" style="enable-background:new 0 0 190.7 190.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EE2257;}
+	.st1{fill:#FFFFFF;}
+</style>
+<rect x="6.2" y="5" class="st0" width="180" height="180"/>
+<g>
+	<g>
+		<path class="st1" d="M100.6,25.6c17.2,0,29.9,2.9,38.1,8.6C146.9,40,151,47.8,151,57.8c0,6-1.6,11.6-4.8,16.8
+			c-3.2,5.3-8.5,9.5-16,12.6c-7.5,3.2-17.7,4.8-30.6,4.8H88.4v36.7H56V25.6H100.6z M99.6,43.5H88.4v30.6h8.2c4.3,0,8.1-0.5,11.4-1.6
+			c3.3-1.1,5.9-2.7,7.8-5.1c1.9-2.3,2.8-5.3,2.8-9c0-5.1-1.6-8.9-4.7-11.3C110.7,44.8,106,43.5,99.6,43.5z"/>
+	</g>
+</g>
+</svg>
