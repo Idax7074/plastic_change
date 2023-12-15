@@ -92,19 +92,19 @@ svg {
 
 @font-face {
   font-family: "Rubik";
-  src: url("font/Rubik-Regular.woff2") format("woff2");
+  src: url("/font/Rubik-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Campton";
-  src: url("font/CamptonBold.woff2") format("woff2");
+  src: url("/font/CamptonBold.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "NotoSans";
-  src: url("font/NotoSansDisplay-ExtraBold.woff2") format("woff2");
+  src: url("/font/NotoSansDisplay-ExtraBold.woff2") format("woff2");
   font-display: swap;
 }
 
